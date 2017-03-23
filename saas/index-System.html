@@ -1,0 +1,3212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>功能配置</title>
+    <!--title图片-->
+	<link rel="shortcut icon" href="img/bitbug_favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index-2.0.css"/>
+    <link rel="stylesheet" type="text/css" href="css/SystemStaff.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/ww-reset.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/edit.css"/>
+    <script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index-currncy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index-System.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/ww-jas.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/my-style.js" type="text/javascript" charset="utf-8"></script>
+     <!--日期插件-->
+     <link href="css/foundation-datepicker.css" rel="stylesheet" type="text/css">
+     <script src="js/foundation-datepicker.js"></script>
+     <script src="js/moment.min.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/foundation-datepicker.zh-CN.js"></script>
+     <script src="js/jquery.daterangepicker.js" type="text/javascript" charset="utf-8"></script>
+	<!--滚轮插件开始-->
+      <link href="css/perfect-scrollbar.css" rel="stylesheet">     
+      <script src="js/jquery.mousewheel.js"></script>
+      <script src="js/perfect-scrollbar.jquery.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="js/perfect-scrollbar.js"></script>
+	  <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>    
+	<!--滚轮插件结束-->
+		<!--tree插件开始-->
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/jquery.treeview.js" type="text/javascript"></script>
+		<script src="js/jquery.treeview.edit.js" type="text/javascript"></script>		
+		<!--tree插件结束-->
+		<script>
+		$(function(){
+			$('#demo-1-1').fdatepicker();
+			
+			$('#demo-1-2').fdatepicker({
+				format: 'yyyy-mm',
+				pickTime: true,
+				titleFormat: "MM yyyy"
+			});
+			
+			$('#date-range14').dateRangePicker({
+				batchMode: 'week',
+				showShortcuts: false
+			});
+			$("#click-input-day").fdatepicker();
+			$("#click-input-month").fdatepicker();
+			$('#click-input-week').dateRangePicker({
+				batchMode: 'week',
+				showShortcuts: false
+			});
+		});
+		</script>	
+  </head>
+  <body>
+  <body>
+        <!--重新绑定手机2弹窗开始-->
+        <div class="rebind-phone2" style="display:none">
+      <div class="rebind-phone2-box">
+          <div class="rebind-phone2-box1">
+              <div>重新绑定手机</div>
+              <div class="rebind-phone2-bt"><img src="img/close-box-2.png" title="关闭"></div>
+          </div>
+          <div class="rebind-phone2-box2">
+              <p>新手机号：</p>
+              <input type="text" value="1333455678"/>
+              <div>发送验证码</div>
+              <p>验证码：</p>
+              <input type="text" placeholder="请输入验证码"/>
+              <p>提示信息在这里</p>
+              <div class="rebind-phone2-bt1">取消</div>
+              <div class="rebind-phone2-bt2">确定</div>
+          </div>
+      </div>
+  </div>
+        <!--重新绑定手机2弹窗结束-->
+        <!--绑定邮箱弹窗开始-->
+        <div class="rebind-mail" style="display:none">
+      <div class="rebind-mail-box">
+          <div class="rebind-mail-box1">
+              <div>绑定邮箱</div>
+              <div class="rebind-mail-bt"><img src="img/close-box-2.png" title="关闭"></div>
+          </div>
+          <div class="rebind-mail-box2">
+              <p>邮箱地址：</p>
+              <input type="text" value="wahah@126.com"/>
+              <div>发送验证邮件</div>
+              <p>验证码：</p>
+              <input type="text" placeholder="请输入验证码"/>
+              <p>提示信息在这里</p>
+              <div class="rebind-mail-bt1">取消</div>
+              <div class="rebind-mail-bt2">确定</div>
+          </div>
+      </div>
+  </div>
+        <!--绑定邮箱弹窗结束-->
+        <!--个人信息-修改头像2弹窗开始-->
+        <div class="msg-change-photo2"style="display: none">
+      <div class="msg-change-photo-box">
+          <div class="msg-change-photo-box1">
+              <div>修改头像</div>
+              <div class="msg-change-photo-closebt2"><img src="img/close-box-2.png" title="关闭"></div>
+          </div>
+          <div class="msg-change-photo-box2">
+              <div><img src="img/u16.jpg" alt=""/></div>
+              <p class="">请选择图片</p>
+              <p class="">支持jpg/gif/png格式图片，文件需小于1M</p>
+              <p class="">提示性文字放在这里，居中</p>
+              <div class="msg-change-photo2-bt1">确认</div>
+              <div class="msg-change-photo2-bt2">取消</div>
+          </div>
+      </div>
+  </div>
+        <!--个人信息-修改头像2弹窗结束-->
+		<!--工作页面选择同事窗口    2    开始-->
+ 	  <div id="two-choose-workmate">
+			<div class="two-choose-workmate-top">
+				<p>选择同事</p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="two-choose-workmate-colleague">
+				<ul>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/taylor-2.jpg"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name="" id="" value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="two-choose-workmate-list">
+					<p class="two-choose-list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="two-choose-list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/taylor-2.jpg"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/taylor-3.jpg"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="two-choose-list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="two-choose-list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/taylor-2.jpg"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/girl.jpg"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="two-choose-list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="two-choose-list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/taylor-2.jpg"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="two-colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>员工姓名员工姓名员工姓名员工姓名员工姓名员工姓名员工姓名</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>员工姓名员工姓名员工姓名员工姓名员工姓名员工姓名员工姓名</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/taylor-2.jpg"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="two-choose-workmate-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--工作页面选择同事窗口    2   结束-->
+		<!--消息页面右侧邀请新同事框开始-->
+		<div id="chat-right-invite">
+			<div>
+				<p>邀请新同事加入</p>
+				<p class="invite-delete"><img src="img/close-box-2.png"/></p>
+			</div>
+			<div>
+				<div><img src="img/smile-blue.png"/></div>
+				<ul>
+					<li>提示：</li>
+					<li>1、您可以通过手机号码或邮件邀请同事加入到费控宝;</li>
+					<li>2、也可以通过：点击 <span class="ctrl-href">复制链接</span>，把链接直接发送给同事;</li>
+					<li>3、或者让同事扫描 <span class="invite_QR">二维码</span>，邀请他们加入。</li>
+					<div class="click_QR">
+								<p class="click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+					</div>
+					<div class="click_href">
+							<div>
+								<p>通知</p>
+								<p class="click_href-delete"><img src="img/close-box-2.png"/></p>
+							</div>
+							<div>
+								<p>复制链接成功！</p>
+								<p>可以直接ctrl+v,发送给同事了~</p>
+							</div>
+					</div>
+				</ul>
+			</div>
+			<div class="invite-ul">
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																
+						</ul>
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																	
+						</ul>
+			</div>
+			<div>
+				<p class="add-input">
+					<span><img src="img/add-blue-1.png"/></span>
+					<span>添加新同事</span>
+				</p>
+				<p class="invite-button">邀请</p>
+			</div>
+		</div>  					
+		<!--消息页面右侧邀请新同事框结束-->
+		<!--日历更多弹出框开始-->
+		<div class="more">
+			<div class="more-top">
+				<p>日程安排</p>
+				<p>2015-11-13</p>
+				<p><img src="img/ann_chatbox.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<ul>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+			</ul>
+		</div>
+		<!--日历更多弹出框结束-->
+		<!--正在加载中-->
+  	<div id="load">
+  		<p>
+  			<img src="img/loading.png"/>
+  		</p>
+  	</div>
+  	<!--正在加载中-->
+  	<!--聊天放大功能start-->
+  	<div class="big-chat">
+  		<div class="">
+  			
+  		</div>
+  	</div>
+  	<!--聊天放大功能end-->
+  	<!--附件发送start-->
+  	<div class="enclosure">
+  		<div class="enclosure-top">
+  			<p>上传附件</p>
+  			<p><img src="img/close-box-2.png"/></p>
+  		</div>
+  		<div class="enclosure-a">
+  			<div>
+  				<p><img src="img/doc1(1).png"/></p>
+  				<p><img src="img/close-chating.png"/></p>
+  			</div>
+  			<div>128KB</div>
+  			<div>红蜻蜓的梦想3（hover）</div>
+  			<div>
+  				<p><img src="img/add-blue-1.png"/></p>
+  				<p>添加</p>
+  			</div>
+  		</div>
+  		<div class="enclosure-b">
+  			<ul>
+  				<li>
+  					<div><img src="img/doc1(2).png"/></div>
+  					<div>
+  						<p>红色秦婷多少都哦啥都会</p>
+  						<p>128KB</p>
+  					</div>
+  					<div><img src="img/close-chating.png"/></div>
+  				</li>
+  				<li>
+  					<div><img src="img/doc1(2).png"/></div>
+  					<div>
+  						<p>红色秦婷多少都哦啥都会</p>
+  						<p>128KB</p>
+  					</div>
+  					<div><img src="img/close-chating.png"/></div>
+  				</li>
+  				<li>
+  					<div><img src="img/doc1(2).png"/></div>
+  					<div>
+  						<p>红色秦婷多少都哦啥都会</p>
+  						<p>128KB</p>
+  					</div>
+  					<div><img src="img/close-chating.png"/></div>
+  				</li>
+  				
+  				<div>
+  					<p><img src="img/add-blue-1.png"/></p>
+  					<p>添加</p>
+  				</div>
+  			</ul>
+  		</div>
+  		<p style="clear: both;"> </p>
+  		<div class="enclosure-button">
+  			<div>
+  				发 送
+  			</div>
+  		</div>
+  	</div>
+  	<!--附件发送end-->
+  	<!--图片查看start-->
+  	<div class="img_big">
+  		<img src="img/GEM-img/GEM-15.png"/>
+  	</div>
+  	<!--图片查看end-->
+  	<!--新建日程开始-->
+  	<div class="new-schedule" onresize="new_schedule();">
+  		<div class="new-schedule-top">
+  			<p>创建新日程</p>
+  			<p><img src="img/close-box-2.png"/></p>
+  		</div>
+  		<div class="new-schedule-content">
+  			<div>
+  				<p><img src="img/mark.png"/></p>
+  				<p>日程标题 :</p>
+  				<p><input type="text" name="" id="" value="" placeholder="请输入标题"/></p>
+  			</div>
+  			<div>
+  				<ul>
+  					<li>
+  						<div><img src="img/clock.png"/></div>
+  						<div>开始时间 :</div>
+  						<!--<div>
+  							<p>
+  								<span><input type="text" name="" value=""  id="demo-1-1-1" placeholder="2015-10-14" /></span>
+									<span><img src="img/open.png"/></span>
+  							</p>	
+								<p  class="hour-click">
+									<span>00</span>
+									<span><img src="img/open.png"/></span>
+									时
+								</p>
+								<p  class="minute-click">
+									<span>00</span>
+									<span><img src="img/open.png"/></span>
+									分
+								</p>
+								<p>至</p>
+	  						<p>
+	  							<span><input type="text" name="" value=""  id="demo-1-1-2" placeholder="2015-10-14"/></span>
+	  							<span><img src="img/open.png"/></span>
+	  						</p>
+	  						<p  class="hour-2-click">
+	  							<span>00</span>
+	  							<span><img src="img/open.png"/></span>
+	  							时
+	  						</p>
+  							<p  class="minute-2-click">
+  								<span>00</span>
+									<span><img src="img/open.png"/></span>
+									分
+  							</p>
+  							<ul class="hour">
+										<li>01</li>
+										<li>02</li>
+										<li>03</li>
+										<li>04</li>
+										<li>05</li>
+										<li>06</li>
+										<li>07</li>
+										<li>08</li>
+										<li>09</li>
+										<li>10</li>
+										<li>11</li>
+										<li>12</li>
+										<li>13</li>
+										<li>14</li>
+										<li>15</li>
+										<li>16</li>
+										<li>17</li>
+										<li>18</li>
+										<li>19</li>
+										<li>20</li>
+										<li>21</li>
+										<li>22</li>
+										<li>23</li>
+										<li>24</li>
+									</ul>
+								<ul class="hour-2">
+									<li>01</li>
+									<li>02</li>
+									<li>03</li>
+									<li>04</li>
+									<li>05</li>
+									<li>06</li>
+									<li>07</li>
+									<li>08</li>
+									<li>09</li>
+									<li>10</li>
+									<li>11</li>
+									<li>12</li>
+									<li>13</li>
+									<li>14</li>
+									<li>15</li>
+									<li>16</li>
+									<li>17</li>
+									<li>18</li>
+									<li>19</li>
+									<li>20</li>
+									<li>21</li>
+									<li>22</li>
+									<li>23</li>
+									<li>24</li>
+								</ul>
+								<ul class="minute">
+									<li>01</li>
+									<li>02</li>
+									<li>03</li>
+									<li>04</li>
+									<li>05</li>
+									<li>06</li>
+									<li>07</li>
+									<li>08</li>
+									<li>09</li>
+									<li>10</li>
+									<li>11</li>
+									<li>12</li>
+									<li>13</li>
+									<li>14</li>
+									<li>15</li>
+									<li>16</li>
+									<li>17</li>
+									<li>18</li>
+									<li>19</li>
+									<li>20</li>
+									<li>21</li>
+									<li>22</li>
+									<li>23</li>
+									<li>24</li>
+									<li>25</li>
+									<li>26</li>
+									<li>27</li>
+									<li>28</li>
+									<li>29</li>
+									<li>30</li>
+									<li>20</li>
+									<li>21</li>
+									<li>22</li>
+									<li>23</li>
+									<li>24</li>
+									<li>25</li>
+									<li>26</li>
+									<li>27</li>
+									<li>28</li>
+									<li>29</li>
+									<li>30</li>
+									<li>31</li>
+									<li>32</li>
+									<li>33</li>
+									<li>34</li>
+									<li>35</li>
+									<li>36</li>
+									<li>37</li>
+									<li>38</li>
+									<li>39</li>
+									<li>40</li>
+									<li>40</li>
+									<li>41</li>
+									<li>42</li>
+									<li>43</li>
+									<li>44</li>
+									<li>45</li>
+									<li>46</li>
+									<li>47</li>
+									<li>48</li>
+									<li>49</li>
+									<li>50</li>
+									<li>51</li>
+									<li>52</li>
+									<li>53</li>
+									<li>54</li>
+									<li>55</li>
+									<li>56</li>
+									<li>57</li>
+									<li>58</li>
+									<li>59</li>
+									<li>60</li>	
+								</ul>
+								<ul class="minute-2">
+									<li>01</li>
+									<li>02</li>
+									<li>03</li>
+									<li>04</li>
+									<li>05</li>
+									<li>06</li>
+									<li>07</li>
+									<li>08</li>
+									<li>09</li>
+									<li>10</li>
+									<li>11</li>
+									<li>12</li>
+									<li>13</li>
+									<li>14</li>
+									<li>15</li>
+									<li>16</li>
+									<li>17</li>
+									<li>18</li>
+									<li>19</li>
+									<li>20</li>
+									<li>21</li>
+									<li>22</li>
+									<li>23</li>
+									<li>24</li>
+									<li>25</li>
+									<li>26</li>
+									<li>27</li>
+									<li>28</li>
+									<li>29</li>
+									<li>30</li>
+									<li>20</li>
+									<li>21</li>
+									<li>22</li>
+									<li>23</li>
+									<li>24</li>
+									<li>25</li>
+									<li>26</li>
+									<li>27</li>
+									<li>28</li>
+									<li>29</li>
+									<li>30</li>
+									<li>31</li>
+									<li>32</li>
+									<li>33</li>
+									<li>34</li>
+									<li>35</li>
+									<li>36</li>
+									<li>37</li>
+									<li>38</li>
+									<li>39</li>
+									<li>40</li>
+									<li>40</li>
+									<li>41</li>
+									<li>42</li>
+									<li>43</li>
+									<li>44</li>
+									<li>45</li>
+									<li>46</li>
+									<li>47</li>
+									<li>48</li>
+									<li>49</li>
+									<li>50</li>
+									<li>51</li>
+									<li>52</li>
+									<li>53</li>
+									<li>54</li>
+									<li>55</li>
+									<li>56</li>
+									<li>57</li>
+									<li>58</li>
+									<li>59</li>
+									<li>60</li>
+								</ul>
+									
+  						</div>
+  					-->
+  						<div><input type="text"  value="2015-11-19" id="demo-time-start"></div>
+  						<div><img src="img/clock.png"/></div>
+  						<div>结束时间 :</div>
+  						<div><input type="text" value="2015-11-19" id="demo-time-end"></div>
+  					</li>
+  					<li>
+  						<div></div>
+  						<div>全天</div>
+  						<div><img src="img/check-box-2.png"/></div>
+  					</li>
+  					<li>
+  						<div><img src="img/transform.png"/></div>
+  						<div>重复 :</div>
+  						<div>
+  							<p class="repeat">
+  								<span>不重复</span>
+  								<span><img src="img/open.png"/></span>
+  							</p>
+  								<ul>
+  									<li>不重复</li>
+  									<li>每天</li>
+  									<li>每周</li>
+  									<li>每月</li>
+  								</ul>
+  						</div>
+  						<div class="repeat-date">
+  							<p>频率 :</p>
+  							<p><input type="text" name="" id="" value="" placeholder="1"/></p>
+  							<p>月</p>
+  						</div>
+  						<ul class="repeat-week">
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周一</p>
+  							</li>
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周二</p>
+  							</li>
+  							<li>
+  							  <p><img src="img/check-box-2.png"/></p>
+  								<p>周三</p>
+  							</li>
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周四</p>
+  							</li>
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周五</p>
+  							</li>
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周六</p>
+  							</li>
+  							<li>
+  								<p><img src="img/check-box-2.png"/></p>
+  								<p>周日</p>
+  							</li>
+  						</ul>
+  					</li>
+  					<li>
+  						<div></div>
+  						<div>结束 :</div>
+  						<div>
+  							<p class="sch-date">
+  								<span>永不</span>
+  								<span><img src="img/open.png"/></span>
+  							</p>
+  							<ul>
+  									<li>永不</li>
+  									<li>次数</li>
+  									<li>日期</li>
+  							</ul>
+  						</div>
+  						<div class="sch-date-time"><input type="text" name="" id="" value="" placeholder="2015-11-30"/></div>
+  						<div class="sch-date-degree">
+  							<p>发生 :</p>
+  							<p><input type="text" name="" id="" value="" placeholder="1"/></p>
+  							<p>次</p>
+  						</div>
+  					</li>
+  					<li>
+  						<div></div>
+  						<div>结束 :</div>
+  						<div>每1月，截止到</div>
+  					</li>
+  				</ul>
+  			</div>
+  			<div>
+  				<ul>
+  					<li>
+  						<div><img src="img/team-1.png"/></div>
+  						<div>参与人员 :</div>
+  						<div class="add-man-click">
+  							<p><img src="img/add-blue-1.png"/></p>
+  							<p>添加人员</p>
+  						</div>
+  						<ul class="add-man">
+  							<li>
+  								<p><img src="img/GEM-img/GEM-16.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  							<li>
+  								<p><img src="img/GEM-img/GEM-17.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  							<li>
+  								<p><img src="img/GEM-img/GEM-18.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  						</ul>
+  					</li>
+  					<li>
+  						<div><img src="img/location.png"/></div>
+  						<div>地点 :</div>
+  						<div><input type="text" name="" id="" value="" placeholder="请输入地点"/></div>
+  					</li>
+  					<li>
+  						<div><img src="img/file-blue.png"/></div>
+  						<div>日程详情 :</div>
+  						<div><textarea name="" rows="" cols="" placeholder="日程详情描述"></textarea></div>
+  					</li>
+  					<li>
+  						<div><img src="img/clip.png"/></div>
+  						<div>附件 :</div>
+  						<div>
+  							<p><img src="img/add-blue-1.png"/></p>
+  							<p>添加附件</p>
+								<div class="add-accessory">
+									<p><img src="img/acc(10).png"/></p>
+									<p>已完成的储备报表 <span>(100kb)</span></p>
+									<p><img src="img/disable-2.png"/></p>
+								</div>
+								<div class="add-accessory">
+									<p><img src="img/acc(8).png"/></p>
+									<p>已完成的储备报表 <span>(100kb)</span></p>
+									<p><img src="img/disable-2.png"/></p>
+								</div>
+  						</div>
+  					</li>
+  					<li>
+  						<div><img src="img/lock-open.png"/></div>
+  						<div>公开范围 :</div>
+  						<div  class="overt-click">
+  							<p>仅自己</p>
+  							<p><img src="img/open.png"/></p>
+  							<div class="overt-ul">
+  								<p>仅自己</p>
+  								<p>指定人可见</p>
+  								<p>所同事可见</p>
+  							</div>
+  						</div>
+  						<ul class="overt">
+  							<li>
+  								<p><img src="img/GEM-img/GEM-19.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  							<li>
+  								<p><img src="img/GEM-img/GEM-20.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  							<li>
+  								<p><img src="img/GEM-img/GEM-21.png"/></p>
+  								<p><img src="img/disable-2.png"/></p>
+  							</li>
+  						</ul>
+  					</li>
+  					<li>
+  						<div><img src="img/ring.png"/></div>
+  						<div>提醒时间 :</div>
+  						<div>
+  							<p class="warn">
+  								<span>不提醒</span>
+  								<span><img src="img/open.png"/></span>
+  							</p>
+  							
+  							<ul>
+  									<li>不提醒</li>
+  									<li>5分钟前</li>
+  									<li>10分钟前</li>
+  									<li>半小时前</li>
+  									<li>1小时前</li>
+  									<li>2小时前</li>
+  									<li>1天前</li>
+  							</ul>
+  						</div>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  			<div class="new-schedule-button">
+  				<p><input type="button" name="" id="" value="创建" /></p>
+  			</div>
+  	</div>
+  	<!--新建日程结束-->
+  	<!--日程安排弹出框开始-->
+  	<div class="plan">
+  		<div class="plan-top">
+  			<p>日程安排</p>
+  			<p>2015-11-14</p>
+  			<p>
+  				<span><img src="img/message-blue.png"/></span>
+  				<span>快速沟通</span>
+  			</p>
+  			<p><img src="img/ann_chatbox.png"/></p>
+  			<p><img src="img/close-box-2.png"/></p>
+  		</div>
+  		<div class="plan-list">
+  			<ul>
+  				<li>
+  					<p><img src="img/mark.png"/></p>
+  					<p>日程标题：</p>
+  					<p>下半年工作总结大会筹备大会</p>
+  				</li>
+  				<p style="clear: both;height: 15px;"></p>
+  				<li>
+  					<p><img src="img/clock.png"/></p>
+  					<p>时间：</p>
+  					<div>
+  						<p>2015-11-14 09 <span>时</span> 25 <span>分</span></p>
+  						<p><b>至</b></p>
+  						<p>2015-11-14 7 <span>时</span> 48 <span>分</span></p>
+  					</div>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/transform.png"/></p>
+  					<p>重复：</p>
+  					<p>不重复</p>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/team-1.png"/></p>
+  					<p>参与人员：</p>
+  					<ul>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-22.png"/></p>
+  							<p><img src="img/checked-4.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-23.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-24.png"/></p>
+  							<p><img src="img/checked-4.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-25.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-26.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-27.png"/></p>
+  							<p><img src="img/checked-4.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-28.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-29.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-30.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-31.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-32.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  						<li>
+  							<p><img src="img/GEM-img/GEM-33.png"/></p>
+  							<p><img src="img/warning-orange.png"/></p>
+  						</li>
+  					</ul>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/location.png"/></p>
+  					<p>地点：</p>
+  					<p>中央会议室</p>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/file-blue.png"/></p>
+  					<p>日程详情：</p>
+  					<p>总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容总结内容</p>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/clip.png"/></p>
+  					<p>附件：</p>
+  					<div>
+  						<div>
+  							<p><img src="img/acc(9).png"/></p>
+  							<p>下半年工作报告总结大会筹备资料（待定）</p>
+  						</div>
+  						<div>
+  							<p><img src="img/acc(9).png"/></p>
+  							<p>下半年工作报告总结大会筹备资料（待定）</p>
+  						</div>
+  					</div>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/lock-open.png"/></p>
+  					<p>公开范围：</p>
+  					<p>不公开</p>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<li>
+  					<p><img src="img/ring.png"/></p>
+  					<p>提醒时间：</p>
+  					<p>
+  						<span>开始前半小时</span>
+  						<span>距离提醒剩余 <b>23</b> 小时</span>
+  					</p>
+  				</li>
+  				<p style="clear: both;height: 10px;"></p>
+  				<div class="plan-button">
+  					<p><input type="button" name="" id="" value="拒绝" /></p>
+  					<p><input type="button" name="" id="" value="确认" /></p>
+  				</div>
+  				<p style="clear: both;"></p>
+  			</ul>
+  		</div>
+  	</div>
+  	<!--日程安排弹出框结束-->
+  	<!--新建工作报告开始-->
+  	<div class="new-report">
+					<div class="new-work-top">
+						<p>创建我的工作报告</p>
+						<p><img src="img/close-box-2.png"/></p>
+					</div>
+					<ul class="new-work-0-top">
+						<li id="new-work-day">
+							<p><img src="img/kalendar-1.png"/></p>
+							<p class="new-top-color">日报</p>
+						</li>
+						<li id="new-work-week">
+							<p><img src="img/kalendar-gray-7.png"/></p>
+							<p>周报</p>
+						</li>
+						<li id="new-work-month">
+							<p><img src="img/kalnedar-gray-31.png"/></p>
+							<p>月报</p>
+						</li>
+						<li class="demo-1-1-click">
+							<div>
+								<p><input type="text" name="" id="demo-1-1" value="" placeholder="2015-11-16" readonly="readonly"/></p>
+								<p><img src="img/open.png"/></p>
+							</div>
+						</li>
+						<li style="display: none;">
+							<div>
+									<p><input type="text" name="" id="date-range14" value="" placeholder="2016-01-03 至 2016-01-09" readonly="readonly"/><img src="img/open.png"/></p>
+							</div>
+						</li>
+						<li style="display: none;">
+							<div>
+								<p><input type="text" name="" id="demo-1-2" value="" placeholder="2015-07"  data-date="2015-07" data-format="yyyy-mm" data-start-view="year" data-min-view="year" readonly="readonly"/></p>
+								<p><img src="img/open.png"/></p>
+							</div>
+						</li>
+					</ul>
+						<p style="clear: both;height: 10px;"></p>
+					<div class="new-work-form-box">
+						<p id="new-day-sum">今日总结</p>
+						<div class="new-day-sum">
+							<div><textarea name="" rows="" cols="" placeholder="输入您的工作总结"></textarea></div>
+							<div>
+								<div>
+									<p>
+										<span><img src="img/clip.png"/></span>
+										<span>附件</span>
+									</p>
+									<div class="this-length">
+										<span class="span-accessory">
+											<b><img src="img/acc(8).png"/></b>
+											<b>已完成的储备报表 <span>(100kb)</span></b>
+											<b><img src="img/disable-2.png"/></b>
+										</span>
+										<span class="span-accessory">
+											<b><img src="img/acc(8).png"/></b>
+											<b>已完成的储备报表 <span>(100kb)</span></b>
+											<b><img src="img/disable-2.png"/></b>
+										</span>
+										<span class="span-accessory">
+											<b><img src="img/acc(8).png"/></b>
+											<b>已完成的储备报表 <span>(100kb)</span></b>
+											<b><img src="img/disable-2.png"/></b>
+										</span>
+										<p style="clear: both;"></p>
+									</div>
+								</div>
+								<p>已经输入<span>0</span>个字</p>
+							</div>
+						</div>
+						<p style="clear: both;height: 10px;"></p>
+						<p id="new-next-day-sum">明日计划</p>
+						<div class="new-day-sum">
+							<div><textarea name="" rows="" cols="" placeholder="输入您的工作计划"></textarea></div>
+							<div>
+								<div>
+									<p>
+										<span><img src="img/clip.png"/></span>
+										<span>附件</span>
+									</p>
+									<div style="display: none;">
+										<span class="span-accessory">
+											<b><img src="img/acc(8).png"/></b>
+											<b>已完成的储备报表 <span>(100kb)</span></b>
+											<b><img src="img/disable-2.png"/></b>
+										</span>
+										<span class="span-accessory">
+											<b><img src="img/acc(8).png"/></b>
+											<b>已完成的储备报表 <span>(100kb)</span></b>
+											<b><img src="img/disable-2.png"/></b>
+										</span>
+										<p style="clear: both;"></p>
+									</div>
+								</div>
+								<p>已经输入<span>0</span>个字</p>
+							</div>
+						</div>
+						<p style="clear: both;height: 20px;"></p>
+						<div class="new-add-people">
+							<p>批阅人：</p>
+							<p class="new-read-people">
+								<span><img src="img/add-blue-1.png"/></span>
+								<span>添加批阅人</span>
+							</p>
+							<ul>
+								<li>
+									<span><img src="img/GEM-img/GEM-33.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-34.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-35.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-36.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-37.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-38.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-39.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-40.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-41.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-42.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-43.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-44.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-43.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-44.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-45.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+							</ul>
+						</div>
+						<p style="clear: both;height: 20px;"></p>
+						<div class="new-add-people">
+							<p>抄送给：</p>
+							<p class="new-copy-send">
+								<span><img src="img/add-blue-1.png"/></span>
+								<span>添加抄送人</span>
+							</p>
+							<ul>
+								<li>
+									<span><img src="img/GEM-img/GEM-46.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-47.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+								<li>
+									<span><img src="img/GEM-img/GEM-48.png"/></span>
+									<span><img src="img/disable-2.png"/></span>
+								</li>
+							</ul>
+						</div>
+						<p style="clear: both;height: 30px;"></p>
+						<p style="clear: both;height: 30px;"></p>
+					</div>	
+					<div class="new-work-confirm">
+							<p>保存草稿</p>
+							<p>提交</p>
+					</div>
+
+  	</div>
+  	<!--新建工作报告结束-->
+  	<!--报告详情弹出框开始-->
+  	<div class="report">
+  		<div class="report-top">
+  			<div>我的日报</div>
+  			<div>
+  				<p><img src="img/message-blue.png"/></p>
+  				<p>快速沟通</p>
+  				<p><img src="img/close-box-2.png"/></p>
+  			</div>
+  		</div>
+  		<div class="report-content">
+  			<div class="report-img"><img src="img/readed-2.png"/></div>
+  			<p class="report-data">2015年11月20日</p>
+  			<p class="report-data-p">本月总结</p>
+  			<div class="report-day-sum">
+							<div>内容部分内容部分内容部分内容部分内容部分内容部容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容容部分内容部分内容部分内容部分内容分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分</div>
+							<div>
+								<div class="accessory-box">
+									<div>
+											<p>
+												<span><img src="img/clip.png"/></span>
+												<span>附件（无）</span>
+											</p>
+									</div>
+								</div>
+							</div>
+				</div>
+				<p style="height: 10px;clear: both;"></p>
+				<p class="report-data-p">下月计划</p>
+  			<div class="report-day-sum">
+							<div>内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分内容部分</div>
+							<div>
+								<div class="accessory-box">
+									<div>
+										<p><img src="img/acc(9).png"/></p>
+										<p>已完成的储备报表<span>(100kb)</span></p>
+										<p>下载</p>
+										<p>预览</p>
+									</div>
+									<div>
+										<p><img src="img/acc(9).png"/></p>
+										<p>已完成的储备报表<span>(100kb)</span></p>
+										<p>下载</p>
+										<p>预览</p>
+									</div>
+								</div>
+							</div>
+				</div>
+				<p class="report-people">
+					批阅人：<span>费sir</span>
+				</p>
+				<p class="report-people">
+					<b>
+						抄送人：
+					</b>
+					<b>
+						<span>阿费</span>;<span>阿控</span>;<span>阿宝</span>
+					</b>
+				</p>
+				<p style="clear: both;height: 10px;"></p>
+				<div class="report-button">
+					<p><input type="button" name="" id="" value="删除" /></p>
+					<p><input type="button" name="" id="" value="保存草稿" /></p>
+					<p><input type="button" name="" id="" value="提交" /></p>
+				</div>
+					<p style="clear: both;height: 20px;"></p>
+  		</div>
+  	</div>
+  	<!--报告详情弹出框结束-->
+  	<!--抄送人开始-->
+		<div id="mate-invite-group">
+			<div class="mate-invite-group-top">
+				<p>选择同事</p>
+				<p>
+					<span id="mate-invite-group-span">选择同事</span>
+					<span>选择群组</span>
+				</p>
+				<p id="mate-border-bottom-1"><img src="img/bg-01.png"/></p>
+				<p id="mate-border-bottom-2"><img src="img/bg-02.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="mate-invite-group-colleague">
+				<ul>
+					<li>
+						<img src="img/GEM-img/GEM-48.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-49.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-50.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-1.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-2.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-3.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-4.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-5.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name="" id="" value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="mate-colleague-list">
+					<p class="mate-list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="mate-list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-7.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-8.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="mate-list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="mate-list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-9.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-10.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="mate-list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="mate-list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-11.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-12.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-13.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-14.png"/></p>
+								<p>至尊宝</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-15.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-16.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-17.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-18.png"/></p>
+								<p>空空</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-19.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="mate-colleague-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+			<div id="mate-invite-group-crowd">
+				<ul class="mate-crowd-ul">
+					<li>
+						<img src="img/GEM-img/GEM-20.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-21.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-22.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-23.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-24.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-25.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-26.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-27.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-28.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-29.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-30.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+				<p style="clear: both;"></p>
+				<ul class="mate-crowd-list">
+					<li>
+						<p><img src="img/GEM-img/GEM-31.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-32.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-33.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+				</ul>
+				<div class="mate-colleague-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--抄送人结束-->
+  	<!--批阅人开始-->
+ 	  <div id="choose-workmate">
+			<div class="choose-workmate-top">
+				<p>选择同事</p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="choose-workmate-colleague">
+				<ul>
+					<li>
+						<img src="img/GEM-img/GEM-32.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-33.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-34.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-35.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-36.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-37.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-38.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-39.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-40.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-41.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-42.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name="" id="" value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="choose-workmate-list">
+					<p class="choose-list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="choose-list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-42.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-43.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="choose-list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="choose-list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-44.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-45.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="choose-list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="choose-list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-46.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-47.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-48.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-49.png"/></p>
+								<p>孙悟空</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-50.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-1.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-2.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-3.png"/></p>
+								<p>猪八戒</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-4.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="choose-workmate-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--批阅人结束-->
+		<!--日历更多弹出框开始-->
+		<div class="more">
+			<div class="more-top">
+				<p>日程安排</p>
+				<p>2015-11-13</p>
+				<p><img src="img/ann_chatbox.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<ul>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/blue-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+				<li>
+					<p><img src="img/gray-point.png"/></p>
+					<p>产品研讨会北京会场确认</p>
+				</li>
+			</ul>
+		</div>
+		<!--日历更多弹出框结束-->
+  	<!--2层遮罩开始-->
+  	<div id="cover-two"></div>
+  	<!--2层遮罩结束-->
+		<!--遮罩开始-->
+  	<div id="cover"></div>
+  	<!--遮罩结束-->
+  	<!--群设置开始-->
+  	<div id="group-information">
+  		<div>
+  			<p><img src="img/GEM-img/GEM-5.png"/></p>
+  			<p>张三三</p>
+  			<p>
+  				<span><img src="img/add-white.png"/></span>
+  				<span>添加成员</span>
+  			</p>
+  			<p class="close-group"><img src="img/close.png"/></p>
+  		</div>
+  		<div>
+				<p class="group-people">群成员（16人）</p>
+				<ul class="people-list">
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-9.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-10.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-11.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-12.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-13.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-14.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-15.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-16.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-17.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+  			<p style="height: 40px;line-height: 50px;">上海优读科技有限公司</p>
+  			<ul class="group-information">
+  				<li>
+	  				<p>群名称：</p>
+	  				<p class="group-name-1">优读技术部</p>
+	  				<p class="group-name-2"><input type="text" name="" id="" value="" /></p>
+	  				<p class="group-name-3">确定</p>
+	  				<p class="group-name"><img src="img/write-blue.png"/></p>
+					</li>
+					<li>
+						<p>群主：</p>
+	  				<p>小丽</p>
+	  				<ul class="change-list">
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-18.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-19.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-20.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-21.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-22.png"/></p>
+	  						<p>张三三</p>
+	  					</li><li>
+	  						<p><img src="img/GEM-img/GEM-23.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-24.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  				</ul>
+	  				<p class="change-list-click">更换</p>
+					</li>
+					<li>
+						<p>群二维码：</p>
+	  				<p></p>
+						<div class="group_QR">
+								<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+						</div>
+	  				<p class="group_QR_click"><img src="img/block-6.png"/></p>
+					</li>
+					<li>
+						<p>消息免打扰</p>
+						<p></p>
+						<p class="group-click-1"><img src="img/switch-gray.png"/></p>
+					</li>
+					<li>
+						<p></p>
+						<p>群置顶</p>
+						<p class="group-click-2"><img src="img/switch-blue.png"/></p>
+					</li>
+  			</ul>
+  		</div>
+  			<div class="delete-group">
+  				退出该群
+  			</div>
+  	</div>
+  	<!--群设置结束-->
+  	<!--个人设置开始-->
+  	<div id="personal-information">
+  		<div>
+  			<p><img src="img/GEM-img/GEM-24.png"/></p>
+  			<p>张三三</p>
+  			<p>
+  				<span><img src="img/chat.png"/></span>
+  				<span>发送消息</span>
+  			</p>
+  			<p><img src="img/close.png"/></p>
+  		</div>
+  		<ul>
+  			<li>个人设置</li>
+  			<li>
+  				<p>
+  					昵称：
+  				</p>
+  				<p>张三三</p>
+  			</li>
+  			<li>
+  				<p>备注：</p>
+  				<p><img src="img/write-blue.png"/></p>
+  				<p><input type="text" name="" id="" value="" /></p>
+  				<p><input type="button" name="" id="" value="确定" /></p>
+  			</li>
+  			<li>
+  				上海优读科技有限公司
+  			</li>
+  			<li>
+  				<p>姓名：</p>
+  				<p>张天庆</p>
+  			</li>
+  			<li>
+  				<p>部门：</p>
+  				<p>技术部</p>
+  			</li>
+  			<li>
+  				<p>职位：</p>
+  				<p>工程师</p>
+  			</li>
+  			<li>
+  				<p>电话：</p>
+  				<p>+86-153081754</p>
+  			</li>
+  			<li>
+  				<p>邮箱：</p>
+  				<p>abc@a.com</p>
+  			</li>
+  		</ul>
+  	</div>
+		<!--个人设置结束-->
+		<!--聊天窗口邀请新同事开始-->
+		<div id="window-chat-right-invite">
+			<div>
+				<p>邀请新同事加入</p>
+				<p class="window-invite-delete"><img src="img/close-box-2.png"/></p>
+			</div>
+			<div>
+				<div><img src="img/smile-blue.png"/></div>
+				<ul>
+					<li>提示：</li>
+					<li>1、您可以通过手机号码或邮件邀请同事加入到费控宝;</li>
+					<li>2、也可以通过：点击 <span class="window-ctrl-href">复制链接</span>，把链接直接发送给同事;</li>
+					<li>3、或者让同事扫描 <span class="window-invite_QR">二维码</span>，邀请他们加入。</li>
+					<div class="window-click_QR">
+								<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+					</div>
+					<div class="window-click_href">
+							<div>
+								<p>通知</p>
+								<p class="window-click_href-delete"><img src="img/close-box-2.png"/></p>
+							</div>
+							<div>
+								<p>复制链接成功！</p>
+								<p>可以直接ctrl+v,发送给同事了~</p>
+							</div>
+					</div>
+				</ul>
+			</div>
+			<div class="window-invite-ul">
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																
+						</ul>
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																	
+						</ul>
+			</div>
+			<div>
+				<p class="window-add-input">
+					<span><img src="img/add-blue-1.png"/></span>
+					<span>添加新同事</span>
+				</p>
+				<p class="window-invite-button">邀请</p>
+			</div>
+		</div>
+		<!--聊天窗口邀请新同事结束-->
+		<!--创建群组开始-->
+		<div id="invite-group">
+			<div class="invite-group-top">
+				<p>发起群聊</p>
+				<p>
+					<span id="invite-group-span">选择同事</span>
+					<span>选择群组</span>
+				</p>
+				<p id="border-bottom-1"><img src="img/bg-01.png"/></p>
+				<p id="border-bottom-2"><img src="img/bg-02.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="invite-group-colleague">
+				<ul>
+					<li>
+						<img src="img/GEM-img/GEM-25.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-26.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-27.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-28.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-29.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-30.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-31.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-32.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-33.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-34.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-35.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name="" id="" value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="colleague-list">
+					<p class="list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-36.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-37.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-38.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-39.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-40.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-41.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-42.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-43.png"/></p>
+								<p>唐僧</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-44.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-45.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-46.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-47.png"/></p>
+								<p>陌陌</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-48.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="colleague-click">
+					确定<span>（24）</span>
+				</div>
+			</div>
+			<div id="invite-group-crowd">
+				<ul class="crowd-ul">
+					<li>
+						<img src="img/GEM-img/GEM-49.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-50.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-1.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-2.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-3.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-4.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-5.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-9.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+				<p style="clear: both;"></p>
+				<ul class="crowd-list">
+					<li>
+						<p><img src="img/GEM-img/GEM-10.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-11.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-12.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+				</ul>
+				<div class="colleague-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--创建群组结束-->
+		<!--右下角快速开始-->
+		<div class="saas-Enterprise-WeChat">
+			<p><img src="img/qchat.png"/></p>
+			<p>
+				<span><img src="img/bg-qchathover.png"/></span>
+				<span>快速沟通</span>
+			</p>
+		</div>
+		<!--右下角快速结束-->
+		<!--右下角聊天列表开始-->
+		<div class="saas-Enterprise-WeChat-click">
+			<div id="click_nav_none">
+				<p>
+				<img src="img/block-3.png"/>
+				</p>
+			</div>
+			<div class="click_list">
+					<div class="chick_list_top">
+						<p><input type="text" name="" id="" value="" placeholder="搜索"/></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+	  			<ul> 
+	  				<li>
+	  					<span id="span-1" class="cur_click">同事</span>
+		  					<div id="click_nav_1">
+		  						<p>
+		  							邀请新同事
+		  						</p>
+			  					<ul>
+			  						<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-13.png"/></p>
+			  									<p>baby</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-14.png"/></p>
+			  									<p>邓超</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-15.png"/></p>
+			  									<p>至尊宝</p>
+			  									<p>5</p>
+			  								</li><li>
+			  									<p><img src="img/GEM-img/GEM-16.png"/></p>
+			  									<p>范冰冰</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-17.png"/></p>
+			  									<p>郑凯</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-18.png"/></p>
+			  									<p>周杰伦</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>生产部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-19.png"/></p>
+			  									<p>蔡依林</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-20.png"/></p>
+			  									<p>孙俪</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-21.png"/></p>
+			  									<p>郑爽</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-22.png"/></p>
+			  									<p>王国强</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-23.png"/></p>
+			  									<p>沙和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-24.png"/></p>
+			  									<p>花和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-25.png"/></p>
+			  									<p>张磊</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-26.png"/></p>
+			  									<p>陈梓潼</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>研发部</p>
+			  								<p>（10）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-27.png"/></p>
+			  									<p>吴莫愁</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-28.png"/></p>
+			  									<p>陈奕迅</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-29.png"/></p>
+			  									<p>林俊杰</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-30.png"/></p>
+			  									<p>鹿晗</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-31.png"/></p>
+			  									<p>张学友</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-32.png"/></p>
+			  									<p>马丹娜</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-33.png"/></p>
+			  									<p>马小玲</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-34.png"/></p>
+			  									<p>况天佑</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+			  					</ul>
+		  					</div>
+	  				</li>
+	  				<li >
+							<span id="span-2">群组</span>
+								<div id="click_nav_2" style="display: none;" >
+									<p>创建群组</p>
+									<ul>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-35.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-36.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-37.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-38.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										
+									</ul>
+								</div>
+	  				</li>
+	  				<li>
+	  					<span id="span-3">最近</span>
+	  					<ul id="click_nav_3" style="display: none;">
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-39.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-40.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-41.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-42.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></p></div>
+											<div>5</div>
+										</li>
+								</ul>
+	  				</li>
+	  			</ul>
+					<div class="click-search-list">
+								<ul>
+									<div>
+										同事<span>(11)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-43.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-44.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-45.png"/></p>
+										<p>薛仁贵</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-46.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+									<div>
+										群组<span>(16)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-47.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-48.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-49.png"/></p>
+										<p>杨宗保</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-50.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+								</ul>
+							</div>
+			</div>
+		</div>
+		<!--右下角聊天列表结束-->
+		<!--右下角聊天弹出窗口开始-->
+		<div class="saas-chatWindow">
+  				<ul class="window-left">
+  					<li class="bk-list-1">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+  						</div>
+  						<div>凳子琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  					<li class="">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+  						</div>
+  						<div>邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  				</ul>
+  				<div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="group-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+								</div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这位这录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-1.png"/></b>
+									<span class="chat-delete">
+										<span>
+											<img src="img/message-gray.png"/>
+											<span>
+												<b>撤回</b>
+												<b>删除</b>
+											</span>
+										</span>
+										<span>4人未读</span>
+									</span>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>
+										<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+										<b><img src="img/block-1.png"/></b>
+									</p>
+								</div>
+								<div>
+									<p class="chat_click_delete"><img src="img/message-gray.png"/>
+										<span>
+											<b>撤回</b>
+											<b>删除</b>
+										</span>
+									</p>
+									<p>4人未读</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>
+									<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name="" id="" value="发送"  onclick="javascript:setBottom();"/>
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		      <div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="personal-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+  							<p class="saas-right-content-time">10-07 20:42</p>
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+								</div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-1.png"/></div>
+								<div>
+									<p>小丽</p>
+									<div class="people-card-left">
+										<div>名片</div>
+										<div>
+											<p><img src="img/GEM-img/GEM-12.png"/></p>
+											<p>王宝强王宝强王宝强王宝强王宝强</p>
+										</div>
+										<b><img src="img/block-2.png"/></b>
+									</div>
+								</div>
+							</li>
+							<p class="recall">您撤回了一条消息</p>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-11.png"/></div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name="" id="" value="发送" onclick="javascript:setBottom();" />
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		</div>
+		<!--右下角聊天弹出窗口结束-->
+		<header>
+			<div class="saas-top">
+				<div class="saas-logo">
+					<p><img src="img/fkb-logo-2.png"/></p>
+					<p>紫琪公司</p>
+				</div>
+				<ul class="saas-nav">
+						<a href="index-home.html">
+							<li><img src="img/home.png"/></li>
+						</a>
+						<a href="index-information.html">
+							<li>消息<b></b></li>
+						</a>
+						<a href="index-work.html">
+							<li>工作<b></b></li>
+						</a>
+						<a href="index-addressList.html">
+							<li>通讯录</li>
+						</a>
+						<a href="index-find.html">
+							<li>发现</li>
+						</a>
+						<a href="index-System.html">
+							<li style="background: #2D8FD7;">设置</li>
+						</a>
+				</ul>
+				<ul class="saas-nav-right">
+					<li id="saas-add">
+						<span><img src="img/qadd.png"/></span>
+							<ul>
+								<p></p>
+								<li><a href="">记开支流水</a></li>
+								<li><a href="">提交开销</a></li>
+								<li><a href="">差旅预定</a></li>
+								<li><a href="">审批</a></li>
+								<li><a href="">写工作报告</a></li>
+								<li><b></b></li>
+								<li><a href="">发布公告</a></li>
+								<li><a href="">邀请同事</a></li>
+								<li><a href="">创建群组</a></li>
+								<div></div>
+							</ul>
+					</li>
+					<li id="saas-search">
+						<span><img src="img/search_nav.png"/></span>
+						<form action="" method="post">
+							<p></p>
+							<div>
+								<div>
+									<img src="img/search.png"/>
+									<input type="text" name="" id="" value="" placeholder="搜索"/>
+								</div>
+							</div>
+							<span></span>
+						</form>
+					</li>
+					<li id="saas-user">
+						<span id="saas-img"><img src="img/GEM-img/GEM-1.png"/></span>
+						<span>邓紫棋</span>
+						<span><img src="img/select-white.png"/></span>
+						<ul>
+								<p></p>
+								<li><a href="">个人设置</a></li>
+								<li><b></b></li>
+								<li><a href="">账户安全</a></li>
+								<li><a href="">推荐给好友</a></li>
+								<li><a href="">意见反馈</a></li>
+								<li><b></b></li>
+								<li><a href="">客户端下载</a></li>
+								<li><a href="index-login.html">安全退出</a></li>
+								<div></div>
+							</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		
+		
+		<div class="saas-left">
+					<p id="infor-1" class="left-p-click " onclick="location.href = 'index-System.html'; ">
+						<img src="img/FKB-8.png"/>
+						<span>个人信息</span>
+					<p  id="infor-2"  onclick="location.href = 'index-SystemSecurity.html'; ">
+						<img src="img/FKB-5.png"/>
+						<span>账号安全</span>
+					</p>
+					<p  id="infor-3"  onclick="location.href = 'index-SystemInformation.html'; ">
+						<img src="img/FKB-3.png"/>
+						<span>消息通知</span>
+					</p>
+					<p  id="infor-4"  onclick="location.href = 'index-SystemeAllenterprise.html'; ">
+						<img src="img/FKB-2.png"/>
+						<span>企业管理</span>
+					</p>
+		</div>
+		<!--个人信息大页面-->
+		<div class="personal-information-content">
+			<div class="personal-information-body">
+				<div class="personal-information-top">
+					<div class="mypicture-reset">
+						<p class="mypicture-reset-pic"><img src="img/taylor-1.jpg"></p>
+						<p class="mypicture-reset-change">修改头像</p>
+					</div>
+					<div class="name-office">
+						<div class="my-name">张三三</div>
+						<div class="my-position"><span>管理员</span></div>
+						<div class="company-name">
+							<span>上海优读信息技术有限公司</span>
+							<span class="company-name-text">销售部</span>
+							<span class="company-name-text">销售专员</span>
+						</div>
+						<div class="company-name-block"><span>退出企业</span></div>
+						<div class="progress-line"><div class="progress"></div></div>
+					</div>
+					<div class="progress-text"><span>企业设置完成度 36%</span><span class="bangding"><a href="#">绑定邮箱</a></span></div>
+				</div>
+				<div class="personal-information-block">
+					<div class="personal-information-header">
+						<div class="defult-style information-header-basic add-personal-style"><span>基本信息</span></div>
+						<div class="defult-style information-header-business"><span>业务信息</span></div>
+						<div class="defult-style information-header-role"><span>角色与权限</span></div>
+						<div class="defult-style information-header-pay"><span>我的费用标准</span></div>
+					</div>
+					<div class="information-header-big-block">
+						
+						
+						<!--基本信息板块-->
+						<div class="information-header-basic-block" style="display: block;">
+							<div class="Basic-1"><span>姓名：</span><span class="Basic-1-name">张三三</span></div>
+							<div class="Basic-2">昵称：<input type="text" value="张三三"/></div>
+							<div class="Basic-3">
+								<div class="sex-choose"><span>性别：</span></div>
+								<div class="choose-boy"><p class="choose-boy-circle"><img src="img/check-box-1.png" i></p><p><span>男</span></p></div>
+								<div class="choose-girl"><p class="choose-boy-circle"><img src="img/check-box-1.png" i></p><p><span>女</span></p></div>
+							</div>
+							<div class="Basic-4">
+								<p class="bir-text"><span>生日：</span></p>
+								<div class="birthday-choose">
+									<p class="input-date-list"><input type="text" name="" id="click-input-day" value="" placeholder="2015-11-16"/></p>
+									<p class="input-date-icon"><img src="img/fkb(14).png"></p>
+								</div>
+							</div>
+							<div class="Basic-5"><span>手机：</span><span class="number-tel">13012348765</span></div>
+							<div class="Basic-6"><span>邮箱：</span><span class="number-tel">abcd@company.com</span></div>
+							<div class="Basic-7"><span>映射ERP：</span><span class="number-tel">VERP0002</span></div>
+							<div class="Basic-8"><span>工号：</span><span class="number-tel">VD001</span></div>
+							<button>保存</button>
+						</div>
+						
+						<!--业务信息板块-->
+						<div class="information-header-business-block" style="display: none;">
+							<div class="business-1">
+								身份证：<input type="text" value="身份证号"/>
+							</div>
+							<div class="business-2">
+								护照：<input type="text" value="护照编号"/>
+							</div>
+							<div class="business-3">
+								银行卡：<input type="text" value="账号"/>
+							</div>
+							<div class="business-4">
+								开户行：<input type="text" value="开户行"/>
+							</div>
+							<div class="business-5">
+								收款人：<input type="text" value="收款人"/>
+							</div>
+							<div class="business-6">
+								驾照：<input type="text" value="驾照编号"/>
+							</div>
+							<button>保存</button>
+						</div>
+						
+						<!--角色与权限板块-->
+						<div class="information-header-role-block" style="display: none;">
+							<div class="travel-assistant-img-123 control information-header-role-border" style="display:block;">
+					<div class="travel-assistant information-header-role-1">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>差旅助理</span></p></div>
+						<ul class="assistant-list assistant-list-1">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>
+							<li>
+								<span>--saas事业-技术部-服务器技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>
+						<ul>
+					</div>
+					<div class="travel-assistant information-header-role-1">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>部门主管</span></p></div>
+						<ul class="assistant-list assistant-list-1">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>						
+						<ul>
+					</div>	
+					<div class="travel-assistant information-header-role-1">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>财务审核人员</span></p></div>
+						<ul class="assistant-list assistant-list-1">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>						
+						<ul>
+					</div>	
+					<div class="travel-assistant information-header-role-1">
+						<div class="htit" style="position: relative;"><p><img src="img/close-role-icon.png"></p><p style="margin-left: 22px;"><span style="font-size: 12px;">普通有效用户</span></p>
+							<div class="assistant-list-img-11"><img src="img/role-icon.png"></div>
+							<div class="assistant-list-img-22"><img src="img/move-1-icon.png"></div>
+						</div>
+					</div>					
+							</div>
+							<div class="click-move-list click-move-list-role" style="display: block;">
+						<span style="display: block; float: left;">共有一页，每页十条</span>
+						<ul>
+							<li style="border: 1px solid #D2D2D2;">&lt&lt</li>
+							<li>&lt</li>
+							<li style="color:#fff; background: #277BCF;">1</li>
+							<li>&gt</li>
+							<li>&gt&gt</li>
+						</ul>
+						<input type="text" class="number-choose" value=""/>
+						<button>GO</button>
+					</div>
+						</div>
+								
+						<!--我的费用标准-->
+						<div class="information-header-pay-block" style="display: none;">
+							<div class="information-header-pay-border">
+								<div class="information-pay-list information-pay-list-tit">
+									<div class="pay-list"><span>开支项目</span></div>
+									<div class="cities-list"><span>城市</span></div>
+									<div class="moneykind-list"><span>币种<img src="img/fkb(14).png"></span></div>
+									<div class="money-list"><span>费用标准<img src="img/fkb(14).png"></span></div>
+								</div>
+								<div class="informationQlist-scroll ps-container">
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>北京</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>上海</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>400.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>广州</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>交通补贴费</span></div>
+										<div class="cities-list"><span>广州</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>2000.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+									<div class="information-pay-list">
+										<div class="pay-list"><span>市内交通费</span></div>
+										<div class="cities-list"><span>深圳</span></div>
+										<div class="moneykind-list"><span>CNY</span></div>
+										<div class="money-list"><span>500.00 元/人/月</span></div>
+									</div>
+								</div>	
+							</div>
+						<div class="click-move-list click-move-list-role" style="display: block;">
+						<span style="display: block; float: left;">共有一页，每页十条</span>
+						<ul>
+							<li style="border: 1px solid #D2D2D2;">&lt&lt</li>
+							<li>&lt</li>
+							<li style="color:#fff; background: #277BCF;">1</li>
+							<li>&gt</li>
+							<li>&gt&gt</li>
+						</ul>
+						<input type="text" class="number-choose" value=""/>
+						<button>GO</button>
+						</div>
+						</div>
+						
+						<!--管理员尚未进行设置板块-->
+						<div class="not-set" style="display: none;">
+							<p class="not-set-img"><img src="img/manager-set.png"></p>
+							<p class="not-set-text">管理员尚未进行配置</p>
+							<p class="not-set-manager">联系管理员</p>	
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		</div>
+	</body>
+</html>

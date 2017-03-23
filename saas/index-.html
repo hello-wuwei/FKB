@@ -1,0 +1,3343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>差旅预订</title>
+    <!--title图片-->
+	<link rel="shortcut icon" href="img/bitbug_favicon.ico">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="css/foundation-datepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index-2.0.css"/>
+    
+    <link href="css/SystemStaff.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/ww-reset.css" />	
+	<link rel="stylesheet" href="css/edit.css" />
+	
+    <script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index-affiche.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index-currncy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/my-style.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ww-jas.js" type="text/javascript" charset="utf-8"></script>
+    <!--日历插件-开始-->
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+    <script src="js/foundation-datepicker.js"></script>
+	<script src="js/foundation-datepicker.zh-CN.js"></script>	
+	<script src="js/moment.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.daterangepicker.js" type="text/javascript" charset="utf-8"></script>
+	<!--日历插件-结束-->
+	<!--滚动条插件-开始-->
+	<link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/jquery.mousewheel.js"></script>
+	 <script src="js/perfect-scrollbar.jquery.js" type="text/javascript" charset="utf-8"></script>
+	 <script src="js/perfect-scrollbar.js"></script>
+	<script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+	<!--滚动条插件-结束-->
+  </head>
+  
+  <body>
+  <body>
+  	<!--出差费用报销单--》费用项目：团队建设费弹框-->
+  	<div class="apply-day-table apply-team-build business-team-build" style="display: none;">
+  		<div class="apply-day-alert">
+  			<div class="apply-day-alert-top">
+  				<span>费用项目：团队建设费</span><p class="business-team-build-cbt"><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="apply-day-alert-content">
+  				<div class="apply-day-alert-table">
+  					<div class="day-table-thead">
+  						<p class="thead-1"></p>
+  						<p class="thead-2">现金预支单</p>
+  						<p class="thead-3 thead-3-1">财务付款日期</p>
+  						<p class="thead-4 thead-4-1">申请人</p>
+  						<p class="thead-5 thead-5-1">事由</p>
+  						<p class="thead-7 thead-7-1">金额</p>
+  						<p class="thead-8" style="border: none;">操作</p>
+  					</div>
+  					<ul>
+  						<li>
+  							<p class="thead-1">1</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/delete(2).png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">2</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/delete(2).png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">3</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/delete(2).png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">4</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/delete(2).png"></p>
+  						</li>
+  					</ul>
+  				</div>
+  				<button class="business-team-build-cbt">确定</button>
+  			</div>
+  		</div>
+  	</div>
+  	<!--出差费用报销单：选择待核销的现金预支弹框-->
+  	<div class="apply-day-table report-expense-tc2-1" style="display: none;">
+  		<div class="apply-day-alert">
+  			<div class="apply-day-alert-top">
+  				<span>选择待核销的现金预支</span><p class="apply-day-alert-closebt2-1"><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="apply-day-alert-content">
+  				<div class="apply-day-alert-table">
+  					<div class="day-table-thead">
+  						<p class="thead-1"></p>
+  						<p class="thead-2">现金预支单</p>
+  						<p class="thead-3 thead-3-1">财务付款日期</p>
+  						<p class="thead-4 thead-4-1">申请人</p>
+  						<p class="thead-5 thead-5-1">事由</p>
+  						<p class="thead-7 thead-7-1">金额</p>
+  						<p class="thead-8" style="border: none;">操作</p>
+  					</div>
+  					<ul>
+  						<li>
+  							<p class="thead-1">1</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">2</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">3</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">4</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">南京出差</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  					</ul>
+  				</div>
+  				<button class="report-expense-bt2-1">添加</button>
+  			</div>
+  		</div>
+  	</div>
+  	<!--出差费用报销单：选择待报销的开支流水弹框-->
+	<div class="apply-day-table report-expense-tc1-1" style="display: none;">
+  		<div class="apply-day-alert">
+  			<div class="apply-day-alert-top">
+  				<span>选择待报销的开支流水</span><p class="apply-day-alert-closebt1-1"><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="apply-day-alert-content">
+  				<div class="apply-day-alert-table">
+  					<div class="day-table-thead">
+  						<p class="thead-1"></p>
+  						<p class="thead-2">单据编号</p>
+  						<p class="thead-3 thead-3-1">填制时间</p>
+  						<p class="thead-4 thead-4-1">申请人</p>
+  						<p class="thead-5 thead-5-1">开支项目</p>
+  						<p class="thead-7 thead-7-1">金额</p>
+  						<p class="thead-8" style="border: none;">操作</p>
+  					</div>
+  					<ul>
+  						<li>
+  							<p class="thead-1">1</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">市内交通费</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">2</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">市内交通费</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">3</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">市内交通费</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">4</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3 thead-3-1">2016-01-07 15:38</p>
+	  						<p class="thead-4 thead-4-1">陈陈陈</p>
+	  						<p class="thead-5 thead-5-1">市内交通费</p>
+	  						<p class="thead-7 thead-7-1">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-1" style="border: none;"><img src="img/no-check.png"></p>
+  						</li>
+  					</ul>
+  				</div>
+  				<button class="report-expense-bt1-1">添加</button>
+  			</div>
+  		</div>
+  	</div>
+  	<!--选择待报销的出差申请单弹框-->	
+	<div class="apply-day-table wait-pay-tc1" style="display: none;">
+  		<div class="apply-day-alert">
+  			<div class="apply-day-alert-top">
+  				<span>选择待报销的出差申请单</span><p class="wait-pay-close-bt1"><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="apply-day-alert-content">
+  				<div class="apply-day-alert-table">
+  					<div class="day-table-thead">
+  						<p class="thead-1"></p>
+  						<p class="thead-2">单据编号</p>
+  						<p class="thead-3">事由</p>
+  						<p class="thead-4">申请人</p>
+  						<p class="thead-5">记账部门</p>
+  						<p class="thead-6">记账项目</p>
+  						<p class="thead-7">金额</p>
+  						<p class="thead-8" style="border: none;">操作</p>
+  					</div>
+  					<ul>
+  						<li>
+  							<p class="thead-1">1</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3">出差</p>
+	  						<p class="thead-4">陈陈陈</p>
+	  						<p class="thead-5">费控宝项目</p>
+	  						<p class="thead-6">费控宝项目</p>
+	  						<p class="thead-7">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-2" style="border: none;"><img src="img/choose-table-1.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">2</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3">出差</p>
+	  						<p class="thead-4">陈陈陈</p>
+	  						<p class="thead-5">费控宝项目</p>
+	  						<p class="thead-6">费控宝项目</p>
+	  						<p class="thead-7">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-2" style="border: none;"><img src="img/choose-table-2.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">3</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3">出差</p>
+	  						<p class="thead-4">陈陈陈</p>
+	  						<p class="thead-5">费控宝项目</p>
+	  						<p class="thead-6">费控宝项目</p>
+	  						<p class="thead-7">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-2" style="border: none;"><img src="img/choose-table-2.png"></p>
+  						</li>
+  						<li>
+  							<p class="thead-1">4</p>
+	  						<p class="thead-2">PDTEMO201601060001</p>
+	  						<p class="thead-3">出差</p>
+	  						<p class="thead-4">陈陈陈</p>
+	  						<p class="thead-5">费控宝项目</p>
+	  						<p class="thead-6">费控宝项目</p>
+	  						<p class="thead-7">CNY 200.00</p>
+	  						<p class="thead-8 thead-8-2" style="border: none;"><img src="img/choose-table-2.png"></p>
+  						</li>
+  					</ul>
+  				</div>
+  				<button class="wait-pay-add1">添加</button>
+  			</div>
+  		</div>
+  	</div>
+  	<!------------------------出差费用报销单开始---------------->
+    <div class="report-expense1-box">
+        <div class="all-list general-expense">
+            <div class="all-list-content1">
+                <div>出差费用报销单</div>
+                <div>PTDEMO201601010001</div>
+                <div class="report-expense1-del"><img src="img/close-box-2.png"></div>
+                <div>根据出差费用申请单填制</div>
+                <div class="report-expense1"><img src="img/check-box-3.png" alt=""/></div>
+            </div>
+            <div class="all-list-content1-3">
+                <div>已关联的出差申请单</div>
+                <ul>
+                    <li>订单编号</li>
+                    <li>申请人</li>
+                    <li>金额</li>
+                    <li>提交时间</li>
+                    <li>操作</li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li>PTDEMO201601060001</li>
+                    <li>陈陈陈</li>
+                    <li>CNY  200.00</li>
+                    <li>2016-03-28  14:00</li>
+                    <li><img src="img/delete(2).png" alt=""/></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="all-list-content2 all-list-style1">
+                <div>基本信息</div>
+                <div class="all-list-select">
+                    <p>申请人<span class="add-list-style-color">＊</span>:</p>
+                    <div class="all-list-select-box"><p>请选择申请人</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div class="zindex-style6">
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>申请部门:</p>
+                    <div class="all-list-select-box"><p>请选择申请部门</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div class="zindex-style7">
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="all-list-select">
+                    <p>审批方式<span class="add-list-style-color">＊</span>:</p>
+                    <div class="all-list-select-box"><p>请选择审批方式</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div class="zindex-style8">
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>支付方式<span class="add-list-style-color">＊</span>:</p>
+                    <div class="all-list-select-box"><p>请选择支付方式</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>结算币种<span class="add-list-style-color">＊</span>:</p>
+                    <div class="all-list-select-box"><p>请选择结算币种</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div class="zindex-style9">
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>最终收款人<span class="add-list-style-color">＊</span>:</p>
+                    <input type="text" placeholder="请输入最终收款人"/>
+                </div>
+                <div class="all-list-select">
+                    <p>开户银行<span class="add-list-style-color">＊</span>:</p>
+                    <input type="text" placeholder="请输入开户银行"/>
+                </div>
+                <div class="all-list-select">
+                    <p>卡号<span class="add-list-style-color">＊</span>:</p>
+                    <input type="text" placeholder="请输入卡号"/>
+                </div>
+                <div class="all-list-select">
+                    <p>备注<span class="add-list-style-color">＊</span>:</p>
+                    <input type="text" placeholder="备注"/>
+                </div>
+            </div>
+            <div class="all-list-content3 add-list-style12">
+                <div>入账信息</div>
+                <div class="all-list-select">
+                    <p>记账部门<span class="add-list-style-color">＊</span>:</p>
+                    <div class="all-list-select-box"><p>请选择记账部门</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>记账项目 :</p>
+                    <div class="all-list-select-box"><p>请选择记账项目</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>内部订单:</p>
+                    <div class="all-list-select-box"><p>请选择内部订单</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>产品线:</p>
+                    <div class="all-list-select-box"><p>请输入产品线</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-list-select">
+                    <p>事业部:</p>
+                    <div class="all-list-select-box"><p>请输入事业部</p>
+                        <div><img src="img/fkb(14).png" alt=""/></div>
+                        <div>
+                            <p>1111111111</p>
+                            <p>2222222222</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="all-list-content5-2-1" >
+                <div>费用报销申请信息
+                    <span>添加开支流水<span class="add-list-style-color">＊</span></span>
+                    <span><img src="img/add.png" alt="/"/></span>
+                </div>
+                <ul>
+                    <li></li>
+                    <li>开支费用类型</li>
+                    <li>费用项目</li>
+                    <li>金额</li>
+                    <li>汇率</li>
+                    <li>折合本币</li>
+                    <li>查看</li>
+                </ul>
+                <ul>
+                    <li>1</li>
+                    <li>团队建设费</li>
+                    <li>住宿费</li>
+                    <li>CNY   200.00</li>
+                    <li>1.000</li>
+                    <li>200.00</li>
+                    <li class="check-business-team-build"><img src="img/check.png" alt=""/></li>
+                </ul>
+                <ul>
+                    <li>2</li>
+                    <li>车辆维修费</li>
+                    <li>补贴费</li>
+                    <li>CNY   200.00</li>
+                    <li>1.000</li>
+                    <li>200.00</li>
+                    <li class="check-business-team-build"><img src="img/check.png" alt=""/></li>
+                </ul>
+                <ul>
+                    <li>2</li>
+                    <li>车辆维修费</li>
+                    <li>补贴费</li>
+                    <li>USD   200.00</li>
+                    <li>1.000</li>
+                    <li>600.00</li>
+                    <li class="check-business-team-build"><img src="img/check.png" alt=""/></li>
+                </ul>
+                <ul>
+                    <span>1000.00</span>
+                    <span>总金额: </span>
+                </ul>
+            </div>
+            <div class="all-list-content5-3-1" >
+                <div>报销及应付金额
+                    <span>核销预支申请</span>
+                    <span><img src="img/add.png" alt="/"/></span>
+                </div>
+                <div class="business-table daily-expense-wait-pay2">
+                    <ul class="business-table1">
+                        <li></li>
+                        <li></li>
+                        <li>报销币种</li>
+                        <li>汇率</li>
+                        <li>出差申请预算</li>
+                        <li>报销实际金额</li>
+                        <li>核销金额</li>
+                        <li>应付金额</li>
+                        <li>折合本币</li>
+                    </ul>
+                    <ul class="business-table1">
+                        <li class="business-table1-change"><img src="img/open.png" alt=""/></li>
+                        <li>1</li>
+                        <li>CNY</li>
+                        <li>1.0000</li>
+                        <li>0.00</li>
+                        <li>9000.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                    </ul>
+                    <ul class="business-table2">
+                        <li class="add-style15"></li>
+                        <li>现金预支单号</li>
+                        <li>预支金额</li>
+                        <li>可核销金额</li>
+                        <li>核销金额</li>
+                        <li>折合币种报销金额</li>
+                        <li>操作</li>
+                    </ul>
+                    <ul class="business-table2">
+                        <li></li>
+                        <li>caoy123456789</li>
+                        <li>4500.00</li>
+                        <li>0.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                        <li class="business-table2-del"><img src="img/delete(2).png" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="business-table daily-expense-wait-pay2">
+                    <ul class="business-table1">
+                        <li></li>
+                        <li></li>
+                        <li>报销币种</li>
+                        <li>汇率</li>
+                        <li>出差申请预算</li>
+                        <li>报销实际金额</li>
+                        <li>核销金额</li>
+                        <li>应付金额</li>
+                        <li>折合本币</li>
+                    </ul>
+                    <ul class="business-table1">
+                        <li class="business-table1-change"><img src="img/open.png" alt=""/></li>
+                        <li>2</li>
+                        <li>CNY</li>
+                        <li>1.0000</li>
+                        <li>0.00</li>
+                        <li>9000.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                    </ul>
+                    <ul class="business-table2">
+                        <li class="add-style15"></li>
+                        <li>现金预支单号</li>
+                        <li>预支金额</li>
+                        <li>可核销金额</li>
+                        <li>核销金额</li>
+                        <li>折合币种报销金额</li>
+                        <li>操作</li>
+                    </ul>
+                    <ul class="business-table2">
+                        <li></li>
+                        <li>caoy123456789</li>
+                        <li>4500.00</li>
+                        <li>0.00</li>
+                        <li>4500.00</li>
+                        <li>4500.00</li>
+                        <li class="business-table2-del"><img src="img/delete(2).png" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="all-list-content7">
+                <div class="report-expense1-ss">保存并提交</div>
+                <div class="report-expense1-save">仅保存</div>
+                <div class="report-expense1-del">删除</div>
+            </div>
+        </div>
+    </div>
+    <!------------------------出差费用报销单结束-------------->
+  	<!--主页面的导出-机票-->
+  	<div class="popUpbox-exportEmployee strokeFormulation-plane-exportCover">
+		<div class="exportEmployee" style="height: 260px;">
+			<div class="exportEmployee-top">
+				<p>机票预订单信息</p>
+				<span>
+					<img src="img/close-box-2.png">
+				</span>
+			</div>
+			<div class="exportEmployee-bottom" style="height: 214px;">
+				<div class="exportEmployee-bottom-format" style="margin-top: 60px;">
+					<p>选择导出文件格式</p>
+					<div class="exportEmployee-bottom-chice">
+						<p>excel</p>
+						<img src="img/open.png">								
+					</div>
+					<div class="exportEmployee-bottom-popUp">
+						<p>psd</p>
+						<p>exle</p>
+					</div>
+				</div>
+				<div class="exportEmployee-bottom-preservation">保存</div>
+			</div>
+		</div>
+	</div>
+  	<!--主页面的导出-酒店-->
+  	<div class="popUpbox-exportEmployee strokeFormulation-hotel-exportCover">
+		<div class="exportEmployee" style="height: 260px;">
+			<div class="exportEmployee-top">
+				<p>酒店预订单信息</p>
+				<span>
+					<img src="img/close-box-2.png">
+				</span>
+			</div>
+			<div class="exportEmployee-bottom" style="height: 214px;">
+				<div class="exportEmployee-bottom-format" style="margin-top: 60px;">
+					<p>选择导出文件格式</p>
+					<div class="exportEmployee-bottom-chice">
+						<p>excel</p>
+						<img src="img/open.png">								
+					</div>
+					<div class="exportEmployee-bottom-popUp">
+						<p>psd</p>
+						<p>exle</p>
+					</div>
+				</div>
+				<div class="exportEmployee-bottom-preservation">保存</div>
+			</div>
+		</div>
+	</div>
+	<!--主页面的导出-火车票-->
+  	<div class="popUpbox-exportEmployee strokeFormulation-train-exportCover">
+		<div class="exportEmployee" style="height: 260px;">
+			<div class="exportEmployee-top">
+				<p>火车票预订单信息</p>
+				<span>
+					<img src="img/close-box-2.png">
+				</span>
+			</div>
+			<div class="exportEmployee-bottom" style="height: 214px;">
+				<div class="exportEmployee-bottom-format" style="margin-top: 60px;">
+					<p>选择导出文件格式</p>
+					<div class="exportEmployee-bottom-chice">
+						<p>excel</p>
+						<img src="img/open.png">								
+					</div>
+					<div class="exportEmployee-bottom-popUp">
+						<p>psd</p>
+						<p>exle</p>
+					</div>
+				</div>
+				<div class="exportEmployee-bottom-preservation">保存</div>
+			</div>
+		</div>
+	</div>
+  	
+  	<!------------------机票预订表单开始-------------------------->
+  	<!--机票预订新增-->
+  	<div class="BookInformationCover BookInformationCover-Plane-Add" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>机票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="Success-Book-Inf" style="display: none;">
+  					<div class="Success-Book-icon"><img src="img/Book-Success.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>乘机人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>护照：</span><i>12345678</i></li>
+  					<li><span>航空联盟会员卡：</span><i>会员卡</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查机票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-1" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Air-first-company"><span>首选航空公司：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Air-position"><span>舱位等级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>航班号：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>折扣：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>继续新增</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	
+  	<!--机票待提交-->
+  	<div class="BookInformationCover BookInformationCover-PlaneNotget" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>机票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>乘机人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>护照：</span><i>12345678</i></li>
+  					<li><span>航空联盟会员卡：</span><i>会员卡</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查机票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-2" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Air-first-company"><span>首选航空公司：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Air-position"><span>舱位等级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>航班号：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>折扣：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>删除</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	
+  	<!--机票已提交和待预订-->
+  	<div class="BookInformationCover BookInformationCover-PlaneOnlyLook" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>机票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent">
+  				<ul class="Book-Air-People">
+  					<li><span>乘机人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>护照：</span><i>12345678</i></li>
+  					<li><span>航空联盟会员卡：</span><i>会员卡</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查机票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" value="2015-01-01" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>首选航空公司：</span><i><input type="text" name="" id="" value="东方航空" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>舱位等级：</span><i><input type="text" name="" id="" value="经济舱" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>航班号：</span><i><input type="text" name="" id="" value="123456" /></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2222" /></i></li>
+  					<li><span>折扣：</span><i><input type="text" name="" id="" value="4折" /></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--机票预订成功-->
+  	<div class="BookInformationCover BookInformationCover-PlaneBookSuccess" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>机票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">  			
+  			<div class="Success-Book-Inf">
+  					<div class="Success-Book-icon"><img src="img/Book-Successcheck.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Success">
+  				<ul class="Book-Air-People">
+  					<li><span>乘机人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>护照：</span><i>12345678</i></li>
+  					<li><span>航空联盟会员卡：</span><i>会员卡</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查机票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" value="2015-01-01" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>首选航空公司：</span><i><input type="text" name="" id="" value="东方航空" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>舱位等级：</span><i><input type="text" name="" id="" value="经济舱" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>航班号：</span><i><input type="text" name="" id="" value="123456" readonly="readonly" /></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2222" readonly="readonly" /></i></li>
+  					<li><span>折扣：</span><i><input type="text" name="" id="" value="4折" readonly="readonly" /></i></li>
+  					<li><span>备注：</span><i><textarea readonly="readonly">请输入</textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  
+  
+  	<!------------------火车票预订表单开始-------------------------->
+  	<!--火车票预订新增-->
+  	<div class="BookInformationCover BookInformationCover-Train-Add" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>火车票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="Success-Book-Inf" style="display: none;">
+  					<div class="Success-Book-icon"><img src="img/Book-Success.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>乘客信息：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查火车票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-3" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>车次：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li class="Seat-position"><span>坐席等级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>继续新增</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--火车票待提交-->
+  	<div class="BookInformationCover BookInformationCover-TrainNotget" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>火车票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>乘客信息：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查火车票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-4" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>车次：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li class="Seat-position"><span>坐席等级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="" placeholder="请输入" /></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>删除</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--火车票已提交和待预订-->
+  	<div class="BookInformationCover BookInformationCover-TrainOnlyLook" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>火车票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent">
+  				<ul class="Book-Air-People">
+  					<li><span>乘客信息：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查火车票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" value="2015-01-01" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>车次：</span><i><input type="text" name="" id="" value="G518" readonly="readonly" /></i></li>
+  					<li><span>坐席等级：</span><i><input type="text" name="" id="" value="经济舱" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2222" readonly="readonly" /></i></li>
+  					<li><span>备注：</span><i><textarea readonly="readonly"></textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	
+  	<!--火车票预订成功-->
+  	<div class="BookInformationCover BookInformationCover-TrainBookSuccess" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>火车票预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="Success-Book-Inf">
+  					<div class="Success-Book-icon"><img src="img/Book-Successcheck.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Success">
+  				<ul class="Book-Air-People">
+  					<li><span>乘客信息：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查火车票</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计出发时间<em>*</em>：</span><i><input type="text" name="" value="2015-01-01" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出发城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>到达城市<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>车次：</span><i><input type="text" name="" id="" value="G518" readonly="readonly" /></i></li>
+  					<li><span>坐席等级：</span><i><input type="text" name="" id="" value="经济舱" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2222" readonly="readonly" /></i></li>
+  					<li><span>备注：</span><i><textarea readonly="readonly"></textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	  	<!------------------酒店预订表单开始-------------------------->
+  	<!--酒店预订新增-->
+  	<div class="BookInformationCover BookInformationCover-Hotel-Add" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>酒店预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="Success-Book-Inf" style="display: none;">
+  					<div class="Success-Book-icon"><img src="img/Book-Success.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>入住人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查酒店</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计入住时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-5" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出差城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>入住酒店<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>退房时间：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Hotel-position"><span>酒店星级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="House-type-choose"><span>房型：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>继续新增</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--酒店待提交-->
+  	<div class="BookInformationCover BookInformationCover-HotelNotget" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>酒店预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent BookInformation-Look">
+  				<ul class="Book-Air-People">
+  					<li><span>入住人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查酒店</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计入住时间<em>*</em>：</span><i><input type="text" name="" id="BookinformationDate-6" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>出差城市<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Start-to-city"><span>入住酒店<em>*</em>：</span><i><input type="text" name="" id="" value="" placeholder="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>退房时间：</span><i><input type="text" name="" id="BookinformationDate-OutBook" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="Hotel-position"><span>酒店星级：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li class="House-type-choose"><span>房型：</span><i><input type="text" name="" id="" value="" placeholder="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>备注：</span><i><textarea placeholder="请输入"></textarea></i></li>
+  				</ul>
+  			</div>
+  			<div class="BookInformationBtn">
+  					<button>删除</button>
+  					<button>保存</button>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--酒店已提交和待预订-->
+  	<div class="BookInformationCover BookInformationCover-HotelOnlyLook" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>酒店预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="BookInformationContent">
+  				<ul class="Book-Air-People">
+  					<li><span>入住人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查酒店</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计入住时间<em>*</em>：</span><i><input type="text" name="" id="click-input-day-bookinformation" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出差城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>入住酒店<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>退房时间：</span><i><input type="text" name="" id="" value="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>酒店星级：</span><i><input type="text" name="" id="" value="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>房型：</span><i><input type="text" name="" id="" value="请输入" readonly="readonly" /></i></li>
+  					<li><span>备注：</span><i><textarea readonly="readonly">请输入</textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+  
+  
+  	<!--酒店预订成功-->
+  	<div class="BookInformationCover BookInformationCover-HotelBookSuccess" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>酒店预订单</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+  			<div class="Success-Book-Inf">
+  					<div class="Success-Book-icon"><img src="img/Book-Successcheck.png"><span>您已成功预订！</span></div>
+  			</div>
+  			<div class="BookInformationContent BookInformation-Success">
+  				<ul class="Book-Air-People">
+  					<li><span>入住人：</span><i>陈陈陈</i></li>
+  					<li><span>身份证：</span><i>43012219999999999</i></li>
+  					<li><span>手机号：</span><i>14000000000</i></li>
+  				</ul>
+  				<span><a href="#">查酒店</a></span>
+  				<ul class="Book-Air-Content">
+  					<li><span>预计入住时间<em>*</em>：</span><i><input type="text" name="" id="click-input-day-bookinformation" value="" placeholder="2015-11-16" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>出差城市<em>*</em>：</span><i><input type="text" name="" id="" value="北京" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>入住酒店<em>*</em>：</span><i><input type="text" name="" id="" value="上海" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>退房时间：</span><i><input type="text" name="" id="" value="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>酒店星级：</span><i><input type="text" name="" id="" value="请选择" readonly="readonly" /><img src="img/open.png"></i></li>
+  					<li><span>房型：</span><i><input type="text" name="" id="" value="请输入" readonly="readonly" /></i></li>
+  					<li><span>备注：</span><i><textarea readonly="readonly">请输入</textarea></i></li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  	</div>
+
+
+		<!--城市选择弹框-->
+  	<div class="CityChooseCover">
+  		<div class="CityChooseAlert">
+  			<div class="CityChooseTop">
+  				<span>城市选择</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="SearchCitySqure">
+  				<input type="text"><button>搜索</button>
+  			</div>
+  			<div class="CityListLook">
+	  			<ul>
+	  				<li><p>常用城市</p><p>选择</p></li>
+	  				<li><p>北京</p><p class="CityAdressChoose"><img src="img/choose-table-1.png"></p></li>
+	  				<li><p>上海</p><p class="CityAdressChoose"><img src="img/choose-table-2.png"></p></li>
+	  			</ul>
+  			</div>
+  			<button class="CheckBtn">确定</button>
+  		</div>
+  	</div>
+
+    <!-----------酒店房型弹窗开始---------------->
+    <div class="hotel-house-type-tc" style="display: none;">
+        <div class="hotel-house-type">
+            <div class="hotel-house-type1">
+                <span>酒店房型</span><p class="hotel-house-type-closebt"><img src="img/close-box-2.png"></p>
+            </div>
+
+            <div class="hotel-house-type2">
+                <ul>
+                    <li><p>酒店房型</p><p>选择</p></li>
+                    <li><p>单人标准间</p><p class="hotel-house-type-check"><img src="img/choose-table-1.png"></p></li>
+                    <li><p>双人标准间</p><p class="hotel-house-type-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>大床房</p><p class="hotel-house-type-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>普通套间</p><p class="hotel-house-type-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>家庭套间</p><p class="hotel-house-type-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>高级套间</p><p class="hotel-house-type-check"><img src="img/choose-table-2.png"></p></li>
+                </ul>
+            </div>
+            <button class="hotel-house-type-checkbtn">确定</button>
+        </div>
+    </div>
+    <!-----------酒店房型弹窗结束---------------->
+
+    <!-----------酒店星级弹窗开始---------------->
+    <div class="hotel-level-tc" style="display: none;">
+        <div class="hotel-level">
+            <div class="hotel-level1">
+                <span>酒店星级</span><p class="hotel-level-closebt"><img src="img/close-box-2.png"></p>
+            </div>
+
+            <div class="hotel-level2">
+                <ul>
+                    <li><p>酒店星级</p><p>选择</p></li>
+                    <li><p>三星以下/经济</p><p class="hotel-level-check"><img src="img/choose-table-1.png"></p></li>
+                    <li><p>三星级/舒适</p><p class="hotel-level-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>四星级/高档</p><p class="hotel-level-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>五星级/舒适</p><p class="hotel-level-check"><img src="img/choose-table-2.png"></p></li>
+                </ul>
+            </div>
+            <button class="hotel-level-checkbtn">确定</button>
+        </div>
+    </div>
+    <!-----------酒店星级弹窗结束---------------->
+
+    <!-----------火车坐席等级选择弹窗开始---------------->
+    <div class="train-seat-tc" style="display: none;">
+        <div class="train-seat">
+            <div class="train-seat1">
+                <span>火车坐席等级选择</span><p class="train-seat-closebt"><img src="img/close-box-2.png"></p>
+            </div>
+
+            <div class="train-seat2">
+                <ul>
+                    <li><p>坐席等级</p><p>选择</p></li>
+                    <li><p>二等座</p><p class="train-seat-check"><img src="img/choose-table-1.png"></p></li>
+                    <li><p>一等座</p><p class="train-seat-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>商务座</p><p class="train-seat-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>卧铺</p><p class="train-seat-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>软卧</p><p class="train-seat-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>站票</p><p class="train-seat-check"><img src="img/choose-table-2.png"></p></li>
+                </ul>
+            </div>
+            <button class="train-seat-checkbtn">确定</button>
+        </div>
+    </div>
+    <!-----------火车坐席等级选择弹窗结束---------------->
+
+    <!-----------飞机舱位选择弹窗开始---------------->
+    <div class="plane-seat-tc" style="display: none;">
+        <div class="plane-seat">
+            <div class="plane-seat1">
+                <span>飞机舱位选择</span><p class="plane-seat-closebt"><img src="img/close-box-2.png"></p>
+            </div>
+
+            <div class="plane-seat2">
+                <ul>
+                    <li><p>舱位等级</p><p>选择</p></li>
+                    <li><p>头等舱</p><p class="plane-seat-check"><img src="img/choose-table-1.png"></p></li>
+                    <li><p>商务舱</p><p class="plane-seat-check"><img src="img/choose-table-2.png"></p></li>
+                    <li><p>经济舱</p><p class="plane-seat-check"><img src="img/choose-table-2.png"></p></li>
+                </ul>
+            </div>
+            <button class="plane-seat-checkbtn">确定</button>
+        </div>
+    </div>
+    <!-----------飞机舱位选择弹窗结束---------------->
+
+    <!-----------------航空公司选择开始----------->
+    <div class="airlineChooseCover" style="display: none;">
+        <div class="airlineChooseAlert">
+            <div class="airlineChooseTop">
+                <span>航空公司选择</span><p class="airline-closebt"><img src="img/close-box-2.png"></p>
+            </div>
+            <div class="SearchairlineSqure">
+                <input type="text"><button>搜索</button>
+            </div>
+            <div class="airlineListLook">
+                <ul>
+                    <li>
+                        <p>图标</p>
+                        <p>中文简称</p>
+                        <p>英文缩写</p>
+                        <p>选择 </p>
+                    </li>
+                    <li><p><img src="img/close-box-1.png" alt=""/></p>
+                        <p>中国国航</p>
+                        <p>CA</p>
+                        <p class="airlineCheck"><img src="img/choose-table-1.png"></p>
+                    </li>
+                    <li><p><img src="img/close-box-1.png" alt=""/></p>
+                        <p>东方航空</p>
+                        <p>MU</p>
+                        <p class="airlineCheck"><img src="img/choose-table-2.png"></p>
+                    </li>
+                </ul>
+            </div>
+            <button class="airlineCheckBtn">确定</button>
+        </div>
+    </div>
+    <!----------------航空公司选择结束----------->
+
+
+		<!--机票订单详情-->
+  	<div class="BookInformationCover BookInformationCover-PlaneDetails" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>机票订单详情</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+	  			<div class="BookInformationContent BookInformation-details">
+	  				<ul class="Book-Air-People Book-Air-Ifm">
+	  					<li><span>订单号：</span><i>12334455666</i></li>
+	  					<li><span>订单状态：</span><i>已预订</i></li>
+	  					<li><span>因公/因私：</span><i>因公</i></li>
+	  					<li><span>支付方式：</span><i>会员卡</i></li>
+	  					<li><span>订单时间：</span><i>2016-02-20 10:00</i></li>
+	  				</ul>
+	  				<ul class="Book-Air-People">
+	  					<li><span>乘机人：</span><i>陈陈陈</i></li>
+	  					<li><span>身份证：</span><i>43012219999999999</i></li>
+	  					<li><span>手机号：</span><i>14000000000</i></li>
+	  				</ul>
+	  				<span><a href="#">查机票</a></span>
+	  				<ul class="Book-Air-Content">
+	  					<li><span>航空公司：</span><i><input type="text" name="" value="东方航空" readonly="readonly" /></i></li>
+	  					<li><span>航班号：</span><i><input type="text" name="" id="" value="123455" readonly="readonly" /></i></li>
+	  					<li><span>出发时间：</span><i><input type="text" name="" id="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>出发城市机场：</span><i><input type="text" name="" id="" value="虹桥机场" readonly="readonly" /></i></li>
+	  					<li><span>到达时间：</span><i><input type="text" name="" id="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>到达城市机场：</span><i><input type="text" name="" id="" value="黄花机场" readonly="readonly" /></i></li>
+	  					<li><span>舱位：</span><i><input type="text" name="" id="" value="头等舱" readonly="readonly" /></i></li>
+	  					<li><span>币种：</span><i><input type="text" name="" id="" value="CNY" readonly="readonly" /></i></li>
+	  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2000" readonly="readonly" /></i></li>
+	  					<li><span>折扣：</span><i><input type="text" name="" id="" value="8折" readonly="readonly" /></i></li>
+	  					<li><span>金额：</span><i><input type="text" name="" id="" value="￥1600" readonly="readonly" /></i></li>
+	  				</ul>
+	  			</div>
+	  		</div>
+  		</div>
+  	</div>
+  	
+  	
+  	
+  	<!--火车票订单详情-->
+  	<div class="BookInformationCover BookInformationCover-TrainDetails" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>火车票订单详情</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+	  			<div class="BookInformationContent BookInformation-details">
+	  				<ul class="Book-Air-People Book-Air-Ifm">
+	  					<li><span>订单号：</span><i>12334455666</i></li>
+	  					<li><span>订单状态：</span><i>已预订</i></li>
+	  					<li><span>支付方式：</span><i>公司账户/个人账户</i></li>
+	  					<li><span>订单时间：</span><i>2016-02-20 10:00</i></li>
+	  				</ul>
+	  				<ul class="Book-Air-People">
+	  					<li><span>乘客信息：</span><i>陈陈陈</i></li>
+	  					<li><span>身份证：</span><i>43012219999999999</i></li>
+	  					<li><span>手机号：</span><i>14000000000</i></li>
+	  				</ul>
+	  				<span><a href="#">查火车票</a></span>
+	  				<ul class="Book-Air-Content">
+	  					<li><span>出发地：</span><i><input type="text" name="" value="上海" readonly="readonly" /></i></li>
+	  					<li><span>出发时间：</span><i><input type="text" name="" id="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>到达地：</span><i><input type="text" name="" id="" value="长沙" readonly="readonly" /></i></li>
+	  					<li><span>到达时间：</span><i><input type="text" name="" id="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>车次：</span><i><input type="text" name="" id="" value="G576" readonly="readonly" /></i></li>
+	  					<li><span>座位号：</span><i><input type="text" name="" id="" value="G1" readonly="readonly" /></i></li>
+	  					<li><span>坐席等级：</span><i><input type="text" name="" id="" value="二等座" readonly="readonly" /></i></li>
+	  					<li><span>币种：</span><i><input type="text" name="" id="" value="CNY" readonly="readonly" /></i></li>
+	  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥478" readonly="readonly" /></i></li>	
+	  					<li><span>金额：</span><i><input type="text" name="" id="" value="￥478" readonly="readonly" /></i></li>
+	  				</ul>
+	  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	
+  	
+  	<!--酒店订单详情-->
+  	<div class="BookInformationCover BookInformationCover-HotelDetails" style="display: none;">
+  		<div class="BookInformationTable">
+  			<div class="BookInformationTop">
+  				<span>酒店订单详情</span><p><img src="img/close-box-2.png"></p>
+  			</div>
+  			<div class="BookInformationContent-scroll ps-container">
+	  			<div class="BookInformationContent BookInformation-details">
+	  				<ul class="Book-Air-People Book-Air-Ifm">
+	  					<li><span>订单号：</span><i>12334455666</i></li>
+	  					<li><span>订单状态：</span><i>已预订</i></li>
+	  					<li><span>因公/因私：</span><i>因公</i></li>
+	  					<li><span>支付方式：</span><i>公司账户/个人账户</i></li>
+	  					<li><span>支付类型：</span><i>预付/前台现付</i></li>
+	  					<li><span>订单时间：</span><i>2016-02-20 10:00</i></li>
+	  				</ul>
+	  				<ul class="Book-Air-People">
+	  					<li><span>入住人：</span><i>陈陈陈</i></li>
+	  					<li><span>手机号：</span><i>14000000000</i></li>
+	  				</ul>
+	  				<span><a href="#">查酒店</a></span>
+	  				<ul class="Book-Air-Content">
+	  					<li><span>入住时间：</span><i><input type="text" name="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>离店时间：</span><i><input type="text" name="" id="" value="2016-02-20 10:00" readonly="readonly" /></i></li>
+	  					<li><span>城市名称：</span><i><input type="text" name="" id="" value="长沙" readonly="readonly" /></i></li>
+	  					<li><span>酒店名称：</span><i><input type="text" name="" id="" value="虹桥机场" readonly="readonly" /></i></li>
+	  					<li><span>酒店星级：</span><i><input type="text" name="" id="" value="3星级" readonly="readonly" /></i></li>
+	  					<li><span>酒店房型：</span><i><input type="text" name="" id="" value="酒店型" readonly="readonly" /></i></li>
+	  					<li><span>入住天数：</span><i><input type="text" name="" id="" value="3天" readonly="readonly" /></i></li>
+	  					<li><span>房间数：</span><i><input type="text" name="" id="" value="2间" readonly="readonly" /></i></li>
+	  					<li><span>币种：</span><i><input type="text" name="" id="" value="CNY" readonly="readonly" /></i></li>
+	  					<li><span>票价：</span><i><input type="text" name="" id="" value="￥2000" readonly="readonly" /></i></li>	
+	  					<li><span>金额：</span><i><input type="text" name="" id="" value="￥1600" readonly="readonly" /></i></li>
+	  				</ul>
+	  			</div>
+  			</div>
+  		</div>
+  	</div>
+		
+		
+		
+
+		<!--正在加载中-->
+  	<div id="load">
+  		<p>
+  			<img src="img/loading.png"/>
+  		</p>
+  	</div>
+  	<!--正在加载中-->
+  	<!--聊天放大功能start-->
+  	<div class="big-chat">
+  		<div class="">
+  			
+  		</div>
+  	</div>
+  	<!--聊天放大功能end-->
+ 
+  	<!--图片查看start-->
+  	<div class="img_big">
+  		<img src="img/GEM-img/GEM-15.png"/>
+  	</div>
+  	<!--图片查看end-->
+  	<!--2层遮罩开始-->
+  	<div id="cover-two"></div>
+  	<!--2层遮罩结束-->
+		<!--遮罩开始-->
+  	<div id="cover"></div>
+  	<!--遮罩结束-->
+  	<!--群设置开始-->
+  	<div id="group-information">
+  		<div>
+  			<p><img src="img/GEM-img/GEM-5.png"/></p>
+  			<p>张三三</p>
+  			<p>
+  				<span><img src="img/add-white.png"/></span>
+  				<span>添加成员</span>
+  			</p>
+  			<p class="close-group"><img src="img/close.png"/></p>
+  		</div>
+  		<div>
+				<p class="group-people">群成员（16人）</p>
+				<ul class="people-list">
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-9.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-10.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-11.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-12.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-13.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-14.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-15.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-16.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-17.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+  			<p style="height: 40px;line-height: 50px;">上海优读科技有限公司</p>
+  			<ul class="group-information">
+  				<li>
+	  				<p>群名称：</p>
+	  				<p class="group-name-1">优读技术部</p>
+	  				<p class="group-name-2"><input type="text" name="" id="" value="" /></p>
+	  				<p class="group-name-3">确定</p>
+	  				<p class="group-name"><img src="img/write-blue.png"/></p>
+					</li>
+					<li>
+						<p>群主：</p>
+	  				<p>小丽</p>
+	  				<ul class="change-list">
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-18.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-19.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-20.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-21.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-22.png"/></p>
+	  						<p>张三三</p>
+	  					</li><li>
+	  						<p><img src="img/GEM-img/GEM-23.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  					<li>
+	  						<p><img src="img/GEM-img/GEM-24.png"/></p>
+	  						<p>张三三</p>
+	  					</li>
+	  				</ul>
+	  				<p class="change-list-click">更换</p>
+					</li>
+					<li>
+						<p>群二维码：</p>
+	  				<p></p>
+						<div class="group_QR">
+								<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+						</div>
+	  				<p class="group_QR_click"><img src="img/block-6.png"/></p>
+					</li>
+					<li>
+						<p>消息免打扰</p>
+						<p></p>
+						<p class="group-click-1"><img src="img/switch-gray.png"/></p>
+					</li>
+					<li>
+						<p></p>
+						<p>群置顶</p>
+						<p class="group-click-2"><img src="img/switch-blue.png"/></p>
+					</li>
+  			</ul>
+  		</div>
+  			<div class="delete-group">
+  				退出该群
+  			</div>
+  	</div>
+  	<!--群设置结束-->
+  	<!--个人设置开始-->
+  	<div id="personal-information">
+  		<div>
+  			<p><img src="img/GEM-img/GEM-24.png"/></p>
+  			<p>张三三</p>
+  			<p>
+  				<span><img src="img/chat.png"/></span>
+  				<span>发送消息</span>
+  			</p>
+  			<p><img src="img/close.png"/></p>
+  		</div>
+  		<ul>
+  			<li>个人设置</li>
+  			<li>
+  				<p>
+  					昵称：
+  				</p>
+  				<p>张三三</p>
+  			</li>
+  			<li>
+  				<p>备注：</p>
+  				<p><img src="img/write-blue.png"/></p>
+  				<p><input type="text" name="" id="" value="" /></p>
+  				<p><input type="button" name="" id="" value="确定" /></p>
+  			</li>
+  			<li>
+  				上海优读科技有限公司
+  			</li>
+  			<li>
+  				<p>姓名：</p>
+  				<p>张天庆</p>
+  			</li>
+  			<li>
+  				<p>部门：</p>
+  				<p>技术部</p>
+  			</li>
+  			<li>
+  				<p>职位：</p>
+  				<p>工程师</p>
+  			</li>
+  			<li>
+  				<p>电话：</p>
+  				<p>+86-153081754</p>
+  			</li>
+  			<li>
+  				<p>邮箱：</p>
+  				<p>abc@a.com</p>
+  			</li>
+  		</ul>
+  	</div>
+		<!--个人设置结束-->
+		<!--聊天窗口邀请新同事开始-->
+		<div id="window-chat-right-invite">
+			<div>
+				<p>邀请新同事加入</p>
+				<p class="window-invite-delete"><img src="img/close-box-2.png"/></p>
+			</div>
+			<div>
+				<div><img src="img/smile-blue.png"/></div>
+				<ul>
+					<li>提示：</li>
+					<li>1、您可以通过手机号码或邮件邀请同事加入到费控宝;</li>
+					<li>2、也可以通过：点击 <span class="window-ctrl-href">复制链接</span>，把链接直接发送给同事;</li>
+					<li>3、或者让同事扫描 <span class="window-invite_QR">二维码</span>，邀请他们加入。</li>
+					<div class="window-click_QR">
+								<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+					</div>
+					<div class="window-click_href">
+							<div>
+								<p>通知</p>
+								<p class="window-click_href-delete"><img src="img/close-box-2.png"/></p>
+							</div>
+							<div>
+								<p>复制链接成功！</p>
+								<p>可以直接ctrl+v,发送给同事了~</p>
+							</div>
+					</div>
+				</ul>
+			</div>
+			<div class="window-invite-ul">
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																
+						</ul>
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																	
+						</ul>
+			</div>
+			<div>
+				<p class="window-add-input">
+					<span><img src="img/add-blue-1.png"/></span>
+					<span>添加新同事</span>
+				</p>
+				<p class="window-invite-button">邀请</p>
+			</div>
+		</div>
+		<!--聊天窗口邀请新同事结束-->
+		<!--创建群组开始-->
+		<div id="invite-group">
+			<div class="invite-group-top">
+				<p>发起群聊</p>
+				<p>
+					<span id="invite-group-span">选择同事</span>
+					<span>选择群组</span>
+				</p>
+				<p id="border-bottom-1"><img src="img/bg-01.png"/></p>
+				<p id="border-bottom-2"><img src="img/bg-02.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="invite-group-colleague">
+				<ul>
+					<li>
+						<img src="img/GEM-img/GEM-25.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-26.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-27.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-28.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-29.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-30.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-31.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-32.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-33.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-34.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-35.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name="" id="" value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="colleague-list">
+					<p class="list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-36.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-37.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-38.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-39.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-40.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-41.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-42.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-43.png"/></p>
+								<p>唐僧</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-44.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-45.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-46.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-47.png"/></p>
+								<p>陌陌</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-48.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="colleague-click">
+					确定<span>（24）</span>
+				</div>
+			</div>
+			<div id="invite-group-crowd">
+				<ul class="crowd-ul">
+					<li>
+						<img src="img/GEM-img/GEM-49.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-50.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-1.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-2.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-3.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-4.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-5.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-9.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+				<p style="clear: both;"></p>
+				<ul class="crowd-list">
+					<li>
+						<p><img src="img/GEM-img/GEM-10.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-11.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-12.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+				</ul>
+				<div class="colleague-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--创建群组结束-->
+		<!--右下角快速开始-->
+		<div class="saas-Enterprise-WeChat">
+			<p><img src="img/qchat.png"/></p>
+			<p>
+				<span><img src="img/bg-qchathover.png"/></span>
+				<span>快速沟通</span>
+			</p>
+		</div>
+		<!--右下角快速结束-->
+		<!--右下角聊天列表开始-->
+		<div class="saas-Enterprise-WeChat-click">
+			<div id="click_nav_none">
+				<p>
+				<img src="img/block-3.png"/>
+				</p>
+			</div>
+			<div class="click_list">
+					<div class="chick_list_top">
+						<p><input type="text" name="" id="" value="" placeholder="搜索"/></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+	  			<ul> 
+	  				<li>
+	  					<span id="span-1" class="cur_click">同事</span>
+		  					<div id="click_nav_1">
+		  						<p>
+		  							邀请新同事
+		  						</p>
+			  					<ul>
+			  						<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-13.png"/></p>
+			  									<p>baby</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-14.png"/></p>
+			  									<p>邓超</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-15.png"/></p>
+			  									<p>至尊宝</p>
+			  									<p>5</p>
+			  								</li><li>
+			  									<p><img src="img/GEM-img/GEM-16.png"/></p>
+			  									<p>范冰冰</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-17.png"/></p>
+			  									<p>郑凯</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-18.png"/></p>
+			  									<p>周杰伦</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>生产部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-19.png"/></p>
+			  									<p>蔡依林</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-20.png"/></p>
+			  									<p>孙俪</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-21.png"/></p>
+			  									<p>郑爽</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-22.png"/></p>
+			  									<p>王国强</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-23.png"/></p>
+			  									<p>沙和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-24.png"/></p>
+			  									<p>花和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-25.png"/></p>
+			  									<p>张磊</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-26.png"/></p>
+			  									<p>陈梓潼</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>研发部</p>
+			  								<p>（10）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-27.png"/></p>
+			  									<p>吴莫愁</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-28.png"/></p>
+			  									<p>陈奕迅</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-29.png"/></p>
+			  									<p>林俊杰</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-30.png"/></p>
+			  									<p>鹿晗</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-31.png"/></p>
+			  									<p>张学友</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-32.png"/></p>
+			  									<p>马丹娜</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-33.png"/></p>
+			  									<p>马小玲</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-34.png"/></p>
+			  									<p>况天佑</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+			  					</ul>
+		  					</div>
+	  				</li>
+	  				<li >
+							<span id="span-2">群组</span>
+								<div id="click_nav_2" style="display: none;" >
+									<p>创建群组</p>
+									<ul>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-35.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-36.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-37.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-38.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										
+									</ul>
+								</div>
+	  				</li>
+	  				<li>
+	  					<span id="span-3">最近</span>
+	  					<ul id="click_nav_3" style="display: none;">
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-39.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-40.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-41.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-42.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></p></div>
+											<div>5</div>
+										</li>
+								</ul>
+	  				</li>
+	  			</ul>
+					<div class="click-search-list">
+								<ul>
+									<div>
+										同事<span>(11)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-43.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-44.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-45.png"/></p>
+										<p>薛仁贵</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-46.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+									<div>
+										群组<span>(16)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-47.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-48.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-49.png"/></p>
+										<p>杨宗保</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-50.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+								</ul>
+							</div>
+			</div>
+		</div>
+		<!--右下角聊天列表结束-->
+		<!--右下角聊天弹出窗口开始-->
+		<div class="saas-chatWindow">
+  				<ul class="window-left">
+  					<li class="bk-list-1">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+  						</div>
+  						<div>张三11111111111111111111</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  					<li class="">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+  						</div>
+  						<div>sad1111111111111</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  				</ul>
+  				<div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="group-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+								</div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这位这录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-1.png"/></b>
+									<span class="chat-delete">
+										<span>
+											<img src="img/message-gray.png"/>
+											<span>
+												<b>撤回</b>
+												<b>删除</b>
+											</span>
+										</span>
+										<span>4人未读</span>
+									</span>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>
+										<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+										<b><img src="img/block-1.png"/></b>
+									</p>
+								</div>
+								<div>
+									<p class="chat_click_delete"><img src="img/message-gray.png"/>
+										<span>
+											<b>撤回</b>
+											<b>删除</b>
+										</span>
+									</p>
+									<p>4人未读</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>
+									<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name="" id="" value="发送"  onclick="javascript:setBottom();"/>
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		      <div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="personal-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+  							<p class="saas-right-content-time">10-07 20:42</p>
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+								</div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-1.png"/></div>
+								<div>
+									<p>小丽</p>
+									<div class="people-card-left">
+										<div>名片</div>
+										<div>
+											<p><img src="img/GEM-img/GEM-12.png"/></p>
+											<p>王宝强王宝强王宝强王宝强王宝强</p>
+										</div>
+										<b><img src="img/block-2.png"/></b>
+									</div>
+								</div>
+							</li>
+							<p class="recall">您撤回了一条消息</p>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-11.png"/></div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name="" id="" value="发送" onclick="javascript:setBottom();" />
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		</div>
+		<!--右下角聊天弹出窗口结束-->
+		<header>
+			<div class="saas-top">
+				<div class="saas-logo">
+					<p><img src="img/fkb-logo-2.png"/></p>
+					<p>紫琪公司</p>
+				</div>
+				<ul class="saas-nav">
+						<a href="index-home.html">
+							<li><img src="img/home.png"/></li>
+						</a>
+						<a href="index-information.html">
+							<li>消息<b></b></li>
+						</a>
+						<a href="index-work.html">
+							<li style="background: #2D8FD7;">工作<b></b></li>
+						</a>
+						<a href="index-addressList.html">
+							<li>通讯录</li>
+						</a>
+						<a href="index-find.html">
+							<li>发现</li>
+						</a>
+						<a href="index-System.html">
+							<li>系统管理</li>
+						</a>
+				</ul>
+				<ul class="saas-nav-right">
+					<li id="saas-add">
+						<span><img src="img/qadd.png"/></span>
+							<ul>
+								<p></p>
+								<li><a href="">记开支流水</a></li>
+								<li><a href="">提交开销</a></li>
+								<li><a href="">差旅预订</a></li>
+								<li><a href="">审批</a></li>
+								<li><a href="">写工作报告</a></li>
+								<li><b></b></li>
+								<li><a href="">发布公告</a></li>
+								<li><a href="">邀请同事</a></li>
+								<li><a href="">创建群组</a></li>
+								<div></div>
+							</ul>
+					</li>
+					<li id="saas-search">
+						<span><img src="img/search_nav.png"/></span>
+						<form action="" method="post">
+							<p></p>
+							<div>
+								<div>
+									<img src="img/search.png"/>
+									<input type="text" name="" id="" value="" placeholder="搜索"/>
+								</div>
+							</div>
+							<span></span>
+						</form>
+					</li>
+					<li id="saas-user">
+						<span id="saas-img"><img src="img/GEM-img/GEM-1.png"/></span>
+						<span>邓紫棋</span>
+						<span><img src="img/select-white.png"/></span>
+						<ul>
+								<p></p>
+								<li><a href="">个人设置</a></li>
+								<li><b></b></li>
+								<li><a href="">账户安全</a></li>
+								<li><a href="">推荐给好友</a></li>
+								<li><a href="">意见反馈</a></li>
+								<li><b></b></li>
+								<li><a href="">客户端下载</a></li>
+								<li><a href="index-login.html">安全退出</a></li>
+								<div></div>
+							</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+			
+		<div class="saas-left">
+					<p id="index-work">
+						<img src="img/fkb(1).png"/>
+						<span>工作报告</span>
+					</p>
+					<p id="index-schedule">
+						<img src="img/fkb(9).png"/>
+						<span>日程管理</span>
+					</p>
+					<p id="index-notice">
+						<img src="img/fkb(3).png"/>
+						<span>公告</span></p>
+					<p id="index-travel" class="left-p-click">
+						<img src="img/fkb(27).png"/>
+						<span>差旅预订</span></p>
+					<p id="index-reservation">
+						<img src="img/book-gray.png"/>
+						<span>预订处理</span></p>
+					<p id="index-expenditure">
+						<img src="img/fkb(7).png"/>
+						<span>开支流水</span></p>
+					<p id="index-document">
+						<img src="img/fkb(17).png"/>
+						<span>业务单据</span></p>
+					<p id="index-approval">
+						<img src="img/fkb(11).png"/>
+						<span>业务审批</span></p>
+					<p id="index-property">
+						<img src="img/property-approva-1.png"/>
+						<span>财务审批</span></p>
+					<p id="index-payment">
+						<img src="img/payment1.png"/>
+						<span>结算及支付</span></p>
+					<p id="index-budget">
+						<img src="img/fkb(20).png"/>
+						<span>预算管理</span></p>
+					<p id="index-capital">
+						<img src="img/fkb(22).png"/>
+						<span>资金管控</span></p>
+					<p id="index-performance">
+						<img src="img/fkb(15).png"/>
+						<span>业绩费率管控</span></p>
+					<p id="index-forms">
+						<img src="img/fkb(9).png"/>
+						<span>报表</span></p>
+		</div>
+		<div class="businessDocument">
+			<div class="travelBook-left">
+				<div class="travelBook-left-top">差旅预订</div>
+				<div class="travelBook-left-nav">
+					<div class="travelBook-left-navCover">
+						<img src="img/travlBooklan.png" />
+						<span>差旅预订</span>
+					</div>
+					<div>
+						<img src="img/travlmake-gray.png" />
+						<span>行程制定</span>
+					</div>
+				</div>
+			</div>
+			<div class="travelBook-right">
+				<!--差旅预订-->
+				<div style="display: block;">
+					<div class="travelBook-right-header">
+						<span>差旅预订 > 差旅预订</span>
+					</div>
+                    <div class="travelBook-box1" style="display: block">
+                        <div class="travelBook-right-establish">
+                            <img src="img/makeplane.png" alt="" />
+                            <img src="img/maketoatle.png" alt="" />
+                            <img src="img/maketrain.png" alt="" />
+                        </div>
+                        <div class="travelBook-right-center">
+                            <ul class="travelBook-oneList">
+                                <li class="travelBook-right-centerCover">已出行订单</li>
+                                <li>未出行订单</li>
+                            </ul>
+                            <div class="travelBook-right-centerChiose">
+                                <p>全部</p>
+                                <img src="img/open.png" alt="" />
+                                <div>
+                                    <p>全部</p>
+                                    <p>机票预订</p>
+                                    <p>酒店预订</p>
+                                    <p>火车票预订</p>
+                                </div>
+                            </div>
+                            <div class="travelBook-filter">
+                                <img src="img/filter-white.png" alt="" />
+                                过滤已报销
+                            </div>
+                            <button class="travelBook-reimbursement">去报销</button>
+                        </div>
+                        <div class="travelBook-right-footer travelBook-oneList-div">
+                            <!--已出行订单-->
+                            <div style="display: block;">
+                                <div class="travelBookList-header">
+                                    <p></p>
+                                    <p>外部订单号</p>
+                                    <p>订单类型</p>
+                                    <p>订单时间</p>
+                                    <p>支付方式</p>
+                                    <p>订单用途</p>
+                                    <p>报销状态</p>
+                                    <p>选择</p>
+                                </div>
+                                <ul class="travelBookList-ul">
+                                    <li>
+                                        <p>1</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>机票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>按摩</p>
+                                        <p>未报销</p>
+                                        <p>
+                                            <img src="img/filter-white.png" alt="" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>2</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>火车票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>按摩</p>
+                                        <p>已报销</p>
+                                        <p>
+                                            <img src="img/checked-8.png" alt="" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>3</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>酒店预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>按摩</p>
+                                        <p>已报销</p>
+                                        <p>
+                                            <img src="img/checked-8.png" alt="" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>4</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>机票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>按摩</p>
+                                        <p>未报销</p>
+                                        <p>
+                                            <img src="img/filter-white.png" alt="" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>5</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>机票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>按摩</p>
+                                        <p>已报销</p>
+                                        <p>
+                                            <img src="img/checked-8.png" alt="" />
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="professional-bottom">
+									<p>共有12页，每页10条</p>
+									<ul>
+										<li class="add-style1"><img src="img/first-page.png" alt=""></li>
+										<li class="add-style1"><img src="img/pre-page.png" alt=""></li>
+										<li class="add-style1"><input type="text" name="" value="1"></li>
+										<li class="add-style1"><img src="img/next-page.png" alt=""></li>
+										<li class="add-style1"><img src="img/last-page.png" alt=""></li>
+									</ul>
+									<input class="text-input" type="text" name="" value="" placeholder="1">
+									<input class="button-input" type="button" name="" value="GO">
+								</div>
+                            </div>
+                            <!--未出行订单-->
+                            <div>
+                                <div class="travelBookList-header-noGo">
+                                    <p></p>
+                                    <p>外部订单号</p>
+                                    <p>订单类型</p>
+                                    <p>订单时间</p>
+                                    <p>支付方式</p>
+                                    <p>订单用途</p>
+                                </div>
+                                <ul class="travelBookList-ul-noGo">
+                                    <li>
+                                        <p>1</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>机票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>偷鸡摸狗</p>
+                                    </li>
+                                    <li>
+                                        <p>1</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>火车票预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>偷鸡摸狗</p>
+                                    </li>
+                                    <li>
+                                        <p>1</p>
+                                        <p>PTDEMO201601060001</p>
+                                        <p>酒店预订</p>
+                                        <p>2016-01-07 15:00</p>
+                                        <p>个人支付</p>
+                                        <p>偷鸡摸狗</p>
+                                    </li>
+                                </ul>
+                                <div class="professional-bottom">
+									<p>共有12页，每页10条</p>
+									<ul>
+										<li class="add-style1"><img src="img/first-page.png" alt=""></li>
+										<li class="add-style1"><img src="img/pre-page.png" alt=""></li>
+										<li class="add-style1"><input type="text" name="" value="1"></li>
+										<li class="add-style1"><img src="img/next-page.png" alt=""></li>
+										<li class="add-style1"><img src="img/last-page.png" alt=""></li>
+									</ul>
+									<input class="text-input" type="text" name="" value="" placeholder="1">
+									<input class="button-input" type="button" name="" value="GO">
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="travelBook-box2" style="display: none">
+                        <img src="img/Page1.png" alt=""/>
+                        <span class="travel-Book-none">您尚未开通携程在线订票业务，请联系管理员开通！</span>
+                    </div>
+				</div>
+				<!--行程定制-->
+				<div>
+					<div class="travelBook-right-header">
+						<span>差旅预订 > 行程制定</span>
+					</div>
+					<div class="travelBook-right-center">
+						<ul class="strokeFormulation-oneList">
+							<li class="travelBook-right-centerCover">机票预订单</li>
+							<li>酒店预订单</li>
+							<li>火车票预订单</li>
+						</ul>
+					</div>
+					<div class="travelBook-right-footer strokeFormulation-switch">
+						<!--机票预订单-->
+						<div class="Plane-book-block" style="display: block;">
+							<div class="strokeFormulation-find">
+								<div class="strokeFormulation-date">
+									<p>预订期间</p>
+									<input type="text" value="2016-01" data-format="yyyy-mm" data-start-view="year" data-min-view="year" readonly="readonly" id="strokeFormulation-Date"  />
+									<img alt="" src="img/open.png" />
+								</div>
+								<div class="strokeFormulation-people">
+									<p>到达城市</p>
+									<input type="text" value=""   />
+								</div>
+								<div class="strokeFormulation-people">
+									<p>航空公司</p>
+									<input type="text" value=""   />
+								</div>
+							</div>
+							<div class="strokeFormulation-find strokeFormulation-state">
+								<div class="strokeFormulation-book">
+									<p>预订状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								<div class="strokeFormulation-approval">
+									<p>审批状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								
+								<div class="strokeFormulation-submit">
+									<p>提交状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+										<p>审批通过</p>
+									</div>
+								</div>
+							</div>
+							<div class="strokeFormulation-button">
+								<button class="strokeFormulation-button-one">查询</button>
+								<button class="strokeFormulation-button-two">重置</button>
+								<button class="strokeFormulation-button-three Plane-Ticket-Add">新增</button>
+								<button class="strokeFormulation-button-four strokeFormulation-plane-export">导出</button>
+							</div>
+							<div class="strokeFormulation-planeHeader">
+								<p></p>
+								<p>外部订单号</p>
+								<p>乘客姓名</p>
+								<p>预计出发时间</p>
+								<p>出发城市</p>
+								<p>到达城市</p>
+								<p>航空公司</p>
+								<p>提交状态</p>
+								<p>审批状态</p>
+								<p>预订状态</p>
+							</div>
+							<ul class="strokeFormulation-planeUl">
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>2</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>已提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>3</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>已提交</p>
+									<p>审批中</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>4</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>5</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>已提交</p>
+									<p>审批拒绝</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>6</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>已预订</p>
+								</li>
+								<li>
+									<p>7</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>8</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>9</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>10</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>11</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>12</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p></p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+							</ul>
+							<div class="professional-bottom">
+								<p>共有12页，每页10条</p>
+								<ul>
+									<li class="add-style1"><img src="img/first-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/pre-page.png" alt=""></li>
+									<li class="add-style1"><input type="text" name="" value="1"></li>
+									<li class="add-style1"><img src="img/next-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/last-page.png" alt=""></li>
+								</ul>
+								<input class="text-input" type="text" name="" value="" placeholder="1">
+								<input class="button-input" type="button" name="" value="GO">
+							</div>
+						</div>
+						<!--酒店预订单-->
+						<div class="Hotel-book-block">
+							<div class="strokeFormulation-find">
+								<div class="strokeFormulation-date">
+									<p>预订期间</p>
+									<input type="text" value="2016-01" data-format="yyyy-mm" data-start-view="year" data-min-view="year" readonly="readonly" id="strokeFormulation-Date-hotel"  />
+									<img alt="" src="img/open.png" />
+								</div>
+								<div class="strokeFormulation-people">
+									<p>出差城市</p>
+									<input type="text" value=""   />
+								</div>
+								<div class="strokeFormulation-people">
+									<p>入住人</p>
+									<input type="text" value=""   />
+								</div>
+							</div>
+							<div class="strokeFormulation-find strokeFormulation-state">
+								<div class="strokeFormulation-book">
+									<p>预订状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								<div class="strokeFormulation-approval">
+									<p>审批状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								
+								<div class="strokeFormulation-submit">
+									<p>提交状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+										<p>审批通过</p>
+									</div>
+								</div>
+							</div>
+							<div class="strokeFormulation-button">
+								<button class="strokeFormulation-button-one">查询</button>
+								<button class="strokeFormulation-button-two">重置</button>
+								<button class="strokeFormulation-button-three Hotel-Ticket-Add">新增</button>
+								<button class="strokeFormulation-button-four strokeFormulation-hotel-export">导出</button>
+							</div>
+							<div class="strokeFormulation-planeHeader strokeFormulation-hotelHeader">
+								<p></p>
+								<p>外部订单号</p>
+								<p>入住人</p>
+								<p>出差城市</p>
+								<p>入住酒店</p>
+								<p>入住时间</p>
+								<p>退房时间</p>
+								<p>提交状态</p>
+								<p>审批状态</p>
+								<p>预订状态</p>
+							</div>
+							<ul class="strokeFormulation-planeUl strokeFormulation-hotelUl">
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>已审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>审批拒绝</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>审批中</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>柳州</p>
+									<p>天天</p>
+									<p>2016-01-01 11:11</p>
+									<p>2016-01-02 11:11</p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>已预订</p>
+								</li>
+							</ul>
+							<div class="professional-bottom">
+								<p>共有12页，每页10条</p>
+								<ul>
+									<li class="add-style1"><img src="img/first-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/pre-page.png" alt=""></li>
+									<li class="add-style1"><input type="text" name="" value="1"></li>
+									<li class="add-style1"><img src="img/next-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/last-page.png" alt=""></li>
+								</ul>
+								<input class="text-input" type="text" name="" value="" placeholder="1">
+								<input class="button-input" type="button" name="" value="GO">
+							</div>
+						</div>
+						<!--火车票预订-->
+						<div class="Train-book-block">
+							<div class="strokeFormulation-find">
+								<div class="strokeFormulation-date">
+									<p>预订期间</p>
+									<input type="text" value="2016-01" data-format="yyyy-mm" data-start-view="year" data-min-view="year" readonly="readonly" id="strokeFormulation-Date-train"  />
+									<img alt="" src="img/open.png" />
+								</div>
+								<div class="strokeFormulation-people">
+									<p>乘客姓名</p>
+									<input type="text" value=""   />
+								</div>
+							</div>
+							<div class="strokeFormulation-find strokeFormulation-state">
+								<div class="strokeFormulation-book">
+									<p>预订状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								<div class="strokeFormulation-approval">
+									<p>审批状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+									</div>
+								</div>
+								
+								<div class="strokeFormulation-submit">
+									<p>提交状态</p>
+									<input type="text" value="审核中" readonly="readonly" />
+									<img alt="" src="img/open.png" />
+									<div>
+										<p>未审核</p>
+										<p>审核中</p>
+										<p>已审核</p>
+										<p>审批通过</p>
+									</div>
+								</div>
+							</div>
+							<div class="strokeFormulation-button">
+								<button class="strokeFormulation-button-one">查询</button>
+								<button class="strokeFormulation-button-two">重置</button>
+								<button class="strokeFormulation-button-three Train-Ticket-Add">新增</button>
+								<button class="strokeFormulation-button-four strokeFormulation-train-export">导出</button>
+							</div>
+							<div class="strokeFormulation-planeHeader strokeFormulation-trainHeader">
+								<p></p>
+								<p>外部订单号</p>
+								<p>乘客姓名</p>
+								<p>预计出发时间</p>
+								<p>出发城市</p>
+								<p>到达城市</p>
+								<p>提交状态</p>
+								<p>审批状态</p>
+								<p>预订状态</p>
+							</div>
+							<ul class="strokeFormulation-planeUl strokeFormulation-trainUl">
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p>未提交</p>
+									<p>未审批</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p>已提交</p>
+									<p>审批拒绝</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p>已提交</p>
+									<p>审批中</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>未预订</p>
+								</li>
+								<li>
+									<p>1</p>
+									<p>PTDEMO201601060001</p>
+									<p>赵日天</p>
+									<p>2016-01-01 11:11</p>
+									<p>地府</p>
+									<p>人间</p>
+									<p>已提交</p>
+									<p>审批通过</p>
+									<p>已预订</p>
+								</li>
+							</ul>
+							<div class="professional-bottom">
+								<p>共有12页，每页10条</p>
+								<ul>
+									<li class="add-style1"><img src="img/first-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/pre-page.png" alt=""></li>
+									<li class="add-style1"><input type="text" name="" value="1"></li>
+									<li class="add-style1"><img src="img/next-page.png" alt=""></li>
+									<li class="add-style1"><img src="img/last-page.png" alt=""></li>
+								</ul>
+								<input class="text-input" type="text" name="" value="" placeholder="1">
+								<input class="button-input" type="button" name="" value="GO">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+  </body>
+   <script type="text/javascript">
+  //日期－时间选择
+			$('#strokeFormulation-Date').fdatepicker({
+                 format: 'yyyy-mm'
+			});
+			$('#strokeFormulation-Date-hotel').fdatepicker({
+                 format: 'yyyy-mm'
+			});
+			$('#strokeFormulation-Date-train').fdatepicker({
+                 format: 'yyyy-mm'
+			});
+			$("#BookinformationDate-1").fdatepicker();
+			$("#BookinformationDate-2").fdatepicker();
+			$("#BookinformationDate-3").fdatepicker();
+			$("#BookinformationDate-4").fdatepicker();
+			$("#BookinformationDate-5").fdatepicker();
+			$("#BookinformationDate-6").fdatepicker();
+			$("#BookinformationDate-OutBook").fdatepicker();
+	</script>
+</html>

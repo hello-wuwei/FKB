@@ -1,0 +1,3021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>员工管理</title>
+    <!--title图片-->
+	<link rel="shortcut icon" href="img/bitbug_favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index-2.0.css"/>
+    <link rel="stylesheet" type="text/css" href="css/SystemStaff.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/ww-reset.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/edit.css"/>
+    	<link rel="stylesheet" href="css/mycss.css" />
+    <script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index-currncy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index-System.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ww-jas.js" type="text/javascript" charset="utf-8"></script>
+	<!--滚轮插件开始-->
+      <link href="css/perfect-scrollbar.css" rel="stylesheet">     
+      <script src="js/jquery.mousewheel.js"></script>
+      <script src="js/perfect-scrollbar.jquery.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="js/perfect-scrollbar.js"></script>
+	  <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>    
+	<!--滚轮插件结束-->
+		<!--tree插件开始-->
+    		<link rel="stylesheet" type="text/css" href="css/jquery.treeview.css"/>
+		<link rel="stylesheet" href="css/screen.css" />
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/jquery.treeview.js" type="text/javascript"></script>
+		<script src="js/jquery.treeview.edit.js" type="text/javascript"></script>		
+		<!--tree插件结束-->
+  </head>
+  <body>
+  <body>
+		<!--聊天窗口邀请新同事开始-->
+		<div class="invite-join">
+			<div id="window-chat-right-inv" style="display: block;">
+				<div>
+					<p>邀请新同事加入</p>
+					<p class="window-invite-delete invite-join-delete"><img src="img/close-box-2.png"/></p>
+				</div>
+				<div>
+					<div><img src="img/smile-blue.png"/></div>
+					<ul>
+						<li>提示：</li>
+						<li>1、您可以通过手机号码或邮件邀请同事加入到费控宝;</li>
+						<li>2、也可以通过：点击 <span class="window-ctrl-href">复制链接</span>，把链接直接发送给同事;</li>
+						<li>3、或者让同事扫描 <span class="window-invite_QR">二维码</span>，邀请他们加入。</li>
+						<div class="window-click_QR">
+									<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+									<p><img src="img/qr-code.png"/></p>
+						</div>
+						<div class="window-click_href">
+								<div>
+									<p>通知</p>
+									<p class="window-click_href-delete"><img src="img/close-box-2.png"/></p>
+								</div>
+								<div>
+									<p>复制链接成功！</p>
+									<p>可以直接ctrl+v,发送给同事了~</p>
+								</div>
+						</div>
+					</ul>
+				</div>
+				<div class="window-invite-ul">
+							<ul>
+									<li>姓名:</li>
+									<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+									<li>联系方式：</li>
+									<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																
+							</ul>
+							<ul>
+									<li>姓名:</li>
+									<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
+									<li>联系方式：</li>
+									<li><input type="text" name="" id="" value="" placeholder="请输入邀请邮箱或手机号码"/></li>																	
+							</ul>
+				</div>
+				<div>
+					<p class="window-add-input">
+						<span><img src="img/add-blue-1.png"/></span>
+						<span>添加新同事</span>
+					</p>
+					<p class="window-invite-button">邀请</p>
+				</div>
+			</div>
+		
+		</div>
+		<!--聊天窗口邀请新同事结束-->
+		
+		<!-------批量邀请同事------->
+		<div class="edit-box">
+            <div class="edit-invite">
+                <div class="edit-disable-nav edit-invite-sty">
+                    <div class="edit-invite-sty1">批量邀请同事</div>
+                    <div>
+                    		<img title="关闭" src="img/close-box-2.png" alt=""  />
+                    </div>
+                </div>
+                <div class="edit-disable-cont edit-invite-cont">
+                    <span>温馨提示</span>
+                    <span class="edit-cs">：单次导入最大支持1000个员工信息</span>
+                    <span>第一步：请将员工信息录入到excel里</span>
+                    <span>第二步：请选择需要导入的excel文件</span>
+                    <span>下载Excel模版</span>
+                    <input class="edit-src" type="text" placeholder="c:\desktop\员工邀请文档.xls" value="" readonly="readonly"/>
+                    <input type="button" value="选择文件"/>
+                    <input type="file" onchange="$('.edit-src').val(this.value)"/>
+                    <span>上传文件可能需要几分钟的时间，取决于文件大小和网速</span>
+                    <input type="submit" value="上传文件" class="edit-button edit-invite-button"/>
+                </div>
+            </div>
+		</div>
+		
+		<!--删除管理员弹框开始-->
+		<div class="delete-cover">
+			<div class="delete-cover-alert">
+				<div class="delete-cover-alert-top"><p><span>删除管理员</span></p><p><img src="img/close-box-2.png"></p></div>
+				<div class="delete-cover-alert-content"><p>你确定要删除管理员吗？</p><p class="sure-delete"><span>确定</span></p></div>
+			</div>
+		</div>
+		<!--删除管理员弹框结束-->
+		
+		<!--待分组－员工信息编辑-->
+		<div class="edit-contentBox">
+			<div class="edit-content">
+	        <!-------编辑头部------->
+		        <div class="edit-nav">
+		            <div>编辑</div>
+		            <div>禁用</div>
+		            <div class="edit-nav-close">
+		            		<img src="img/close-box-2.png" title="关闭" />
+		            </div>
+		        </div>
+		        <!-------导航栏------->
+		        <ul class="edit-under-nav">
+			        <li>基本信息</li>
+			        <li>业务信息</li>
+			        <li>分配职位与部门
+			        		<div class="edit-point"></div>
+			        </li>
+			        <li>分配角色权限
+			        		<div class="edit-point"></div>
+			        </li>
+			        <li>个人标准</li>
+			        <div></div>
+		    		</ul>
+	        <!-------内容------->
+	        		<div class="edit-under">
+		            <!-------个人信息------->
+		            <div class="edit-msg">
+		                <p class="edit-msg-lt edit-msg-lt-1">姓名:</p><p class="edit-msg-rt edit-msg-rt-1">张三三</p>
+		                <p class="edit-msg-lt edit-msg-lt-2">性别:</p><p class="edit-msg-rt edit-msg-rt-2">男</p>
+		                <p class="edit-msg-lt edit-msg-lt-3">生日:</p><p class="edit-msg-rt edit-msg-rt-3">1980-01-02</p>
+		                <p class="edit-msg-lt edit-msg-lt-4">手机:</p><p class="edit-msg-rt edit-msg-rt-4">198011112222</p>
+		                <p class="edit-msg-lt edit-msg-lt-5">邮箱:</p><p class="edit-msg-rt edit-msg-rt-5">abcd@company.com</p>
+		                <p class="edit-msg-lt edit-msg-lt-6">映射ERP:</p>
+		                <input type="text" value="VERP0002" class="edit-msg-rt edit-msg-rt-6"/>
+		                <p class="edit-msg-lt edit-msg-lt-7">工号:</p>
+		                <input type="text" value="VD001" class="edit-msg-rt edit-msg-rt-7"/>
+		                <div class="edit-button">保存</div>
+		                <div class="edit-msg-pic"><img src="img/taylor-1.jpg"/></div>
+		            </div>
+		            <!-------业务信息------->
+		            <div class="edit-bmsg">
+		                <p class="edit-bmsg-lt edit-bmsg-lt-1">身份证:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-1">123456123487930093</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-2">护照:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-2">123456123487930093</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-3">银行卡:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-3">12345612348793009079</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-4">中国银行上海浦东新区支行</p>
+		                <p class="edit-bmsg-rt edit-bmsg-lt-5">收款人</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-5">张三三</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-6">驾照:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-6">123456123487930093</p>
+		                <div class="edit-button">保存</div>
+		            </div>
+		            <!-------分配职位与部门------->
+                        <div class="edit-job">
+                            <div class="edit-under-box1 edit-job-box1">
+                                <div>分配组织部门(单选)</div>
+                                <div class="tree-content">
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="father1-name">saas事业部</div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div>技术部</div>
+                                            </div>
+                                            <div class="floor-3">
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div>前端技术部</div>
+                                                </div>
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div>服务技术部</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div>测试部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div>企业事业部</div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor-1-name">费控部</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="edit-under-box1 edit-job-box2">
+                                <div>分配职位(单选)</div>
+                                <div>
+                                    <ul>
+                                        <li>总经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>部门经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>操作岗<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="edit-adjust1">调整组织></span>
+                            <span class="edit-adjust2">调整职位></span>
+                            <div class="edit-button">保存</div>
+                        </div>
+		            <!-------分配角色权限------->
+		            <div class="edit-root">
+		                <div class="edit-under-content1">
+		                <div class="edit-under-box1">
+		                    <div>制定角色（可多选）</div>
+                                <div class="edit-under-scroll">
+                                 <ul class="edit-under-ul content">
+		                            <li>部门助理<div class="edit-gou"><img src="img/checked-5.png"/></div>
+		                            	<b>
+		                            		<img src="img/right.png" />
+		                            	</b>
+		                            </li>
+		                            <li>差旅助理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>预算编辑用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>部门主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>普通有效用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>部门业务审批用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务审核人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                         </ul>
+                                </div>
+		                </div>
+		                <div class="edit-under-box2">
+		                    <p>适用部门范围（可多选）</p>
+		                    <!--无部门选择时， 用这个-->
+                            <div class="edit-under-hide1">
+                                <div class="edit-under-bumen">
+                                    <img src="img/depart.png"/>
+                                </div>
+                                <p>该角色是全局角色，面向公司所有部门</p>
+                            </div>
+                            <!--有部门选择时， 用这个-->
+                            <div class="tree-content">
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">saas事业部</div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                        </div>
+                                        <div class="floor-3">
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">前端技术部</div>
+                                            </div>
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">服务技术部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">测试部</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">企业事业部</div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">企业事业部</div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                        </div>
+                                        <div class="floor-3">
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">前端技术部</div>
+                                            </div>
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">服务技术部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">费控部</div>
+                                    </div>
+                                </div>
+
+                            </div>
+		                </div>
+		            </div>
+		                <div class="edit-under-box1 edit-under-box3">
+		                    <div>已选角色</div>
+		                    <!--无指定角色时用这个-->
+                            <div class="edit-under-hide2">
+                                <div class="edit-under-yxjs">
+                                    <img src="img/default-2.png"/>
+                                </div>
+                                <p>暂时没有指定任何角色</p>
+                            </div>
+                            <!--有指定角色时用这个-->
+                            <div class="edit-checked">
+                                <ul>
+                                    <li>
+                                        <div>差旅助理</div>
+                                        <span>--saas事业-技术部-前端技术部</span>
+                                        <span>--saas事业-技术部-服务器技术部</span>
+                                    </li>
+                                    <li>普通有效用户</li>
+                                    <li>财务审核人员</li>
+                                </ul>
+                            </div>
+		                </div>
+		                <span class="edit-root-sys">系统角色不够？></span>
+		                <div class="edit-button edit-root-save">保存</div>
+		            </div>
+		            <!-------个人标准------->
+		            <div class="edit-stan">
+		                <ul>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1 edit-stan-k1">开支项目</li>
+		                            <li class="edit-stan-l2 edit-stan-k2">城市</li>
+		                            <li class="edit-stan-l3 edit-stan-k3">币种</li>
+		                            <li class="edit-stan-l4 edit-stan-k4">费用标准</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">北京</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">400.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">上海</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">500.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">广州</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">2000.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">交通补贴费</li>
+		                            <li class="edit-stan-l2">广州</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">200.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">交通补贴费</li>
+		                            <li class="edit-stan-l2">深圳</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">500.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                </ul>
+		                <div class="edit-button">保存</div>
+		            </div>
+
+	       </div>
+
+	    </div>
+		</div>
+
+
+        <!--批量分配部门和职位-->
+        <div class="edit-contentBox-lot">
+            <div class="edit-content">
+                <!-------编辑头部------->
+                <div class="edit-nav">
+                    <div class="add-class8">分配职位与部门</div>
+                    <div class="add-class9">
+                        <img src="img/close-box-2.png" title="关闭" />
+                    </div>
+                </div>
+                <!-------内容------->
+                <div class="edit-under">
+
+                    <!-------分配职位与部门------->
+                    <div class="edit-job">
+                        <div class="edit-under-box1 edit-job-box1">
+                            <div>分配组织部门(单选)</div>
+                            <div class="tree-content">
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="father1-name">saas事业部</div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div>技术部</div>
+                                        </div>
+                                        <div class="floor-3">
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div>前端技术部</div>
+                                            </div>
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div>服务技术部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div>测试部</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div>企业事业部</div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor-1-name">费控部</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="edit-under-box1 edit-job-box2">
+                            <div>分配职位(单选)</div>
+                            <div>
+                                <ul>
+                                    <li>总经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    <li>财务经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    <li>部门经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    <li>操作岗<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="edit-adjust1">调整组织></span>
+                        <span class="edit-adjust2">调整职位></span>
+                        <div class="edit-button">保存</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--批量分配权限-->
+        <div class="edit-contentBox-lot1">
+            <div class="edit-content">
+                <!-------编辑头部------->
+                <div class="edit-nav add-class10">
+                    <div class="add-class8">分配角色权限</div>
+                    <div class="edit-nav-close add-class9 add-class11">
+                        <img src="img/close-box-2.png" title="关闭" />
+                    </div>
+                </div>
+                <!-------内容------->
+                <div class="edit-under">
+                    <!-------分配角色权限------->
+                    <div class="edit-root add-class10">
+                        <div class="edit-under-content1">
+                            <div class="edit-under-box1">
+                                <div>制定角色（可多选）</div>
+                                <div class="edit-under-scroll">
+                                    <ul class="edit-under-ul content">
+                                        <li>部门助理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>差旅助理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>预算编辑用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>部门主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>普通有效用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>部门业务审批用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务审核人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit-under-box2">
+                                <p>适用部门范围（可多选）</p>
+                                <!--无部门选择时， 用这个-->
+                                <div class="edit-under-hide1">
+                                    <div class="edit-under-bumen">
+                                        <img src="img/depart.png"/>
+                                    </div>
+                                    <p>该角色是全局角色，面向公司所有部门</p>
+                                </div>
+                                <!--有部门选择时， 用这个-->
+                                <div class="tree-content">
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor1-name">saas事业部</div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                            </div>
+                                            <div class="floor-3">
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div class="floor3-name">前端技术部</div>
+                                                </div>
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div class="floor3-name">服务技术部</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">测试部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor1-name">企业事业部</div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor1-name">企业事业部</div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                            </div>
+                                            <div class="floor-3">
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div class="floor3-name">前端技术部</div>
+                                                </div>
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div class="floor3-name">服务技术部</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor1-name">费控部</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-under-box1 edit-under-box3">
+                            <div>已选角色</div>
+                            <!--无指定角色时用这个-->
+                            <div class="edit-under-hide2">
+                                <div class="edit-under-yxjs">
+                                    <img src="img/default-2.png"/>
+                                </div>
+                                <p>暂时没有指定任何角色</p>
+                            </div>
+                            <!--有指定角色时用这个-->
+                            <div class="edit-checked">
+                                <ul>
+                                    <li>
+                                        <div>差旅助理</div>
+                                        <span>--saas事业-技术部-前端技术部</span>
+                                        <span>--saas事业-技术部-服务器技术部</span>
+                                    </li>
+                                    <li>普通有效用户</li>
+                                    <li>财务审核人员</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="edit-root-sys">系统角色不够？></span>
+                        <div class="edit-button edit-root-save">保存</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+		<!-------待分组－禁用------->
+        <div class="edit-disable-bg">
+            <div class="edit-disable">
+                <div class="edit-disable-nav">
+                    <div>禁用</div>
+                    <div><img title="关闭" src="img/close-box-2.png" alt=""  /></div>
+                </div>
+                <div class="edit-disable-cont">
+                    <span class="edit-disble-disable">是否确认禁用该员工？</span>
+                    <span class="edit-disble-disabletwo">禁用后，该员工将不能登录到公司费控宝系统。</span>
+                    <div class="edit-button edit-button1">禁用</div>
+                    <div class="edit-button edit-button2">取消</div>
+                </div>
+            </div>
+        </div>	
+			
+		<!--所有同事－员工信息编辑-->
+		<div class="edit-contentBox-2" style="display:none;">
+			<div class="edit-content-2">
+	        <!-------编辑头部------->
+		        <div class="edit-nav">
+		            <div>编辑</div>
+		            <div class="forbidden-touse">禁用</div>
+		            <div class="edit-nav-close">
+		            		<img src="img/close-box-2.png" title="关闭" />
+		            </div>
+		        </div>
+		        <!-------导航栏------->
+		        <ul class="edit-under-nav">
+			        <li>基本信息</li>
+			        <li>业务信息</li>
+			        <li>分配职位与部门
+			        		<div class="edit-point"></div>
+			        </li>
+			        <li>分配角色权限
+			        		<div class="edit-point"></div>
+			        </li>
+			        <li>个人标准</li>
+			        <div></div>
+		            
+		    		</ul>
+	        <!-------内容------->
+	        		<div class="edit-under">
+		            <!-------个人信息------->
+		            <div class="edit-msg">
+		                <p class="edit-msg-lt edit-msg-lt-1">姓名:</p><p class="edit-msg-rt edit-msg-rt-1">张三三</p>
+		                <p class="edit-msg-lt edit-msg-lt-2">性别:</p><p class="edit-msg-rt edit-msg-rt-2">男</p>
+		                <p class="edit-msg-lt edit-msg-lt-3">生日:</p><p class="edit-msg-rt edit-msg-rt-3">1980-01-02</p>
+		                <p class="edit-msg-lt edit-msg-lt-4">手机:</p><p class="edit-msg-rt edit-msg-rt-4">198011112222</p>
+		                <p class="edit-msg-lt edit-msg-lt-5">邮箱:</p><p class="edit-msg-rt edit-msg-rt-5">abcd@company.com</p>
+		                <p class="edit-msg-lt edit-msg-lt-6">映射ERP:</p>
+		                <input type="text" value="VERP0002" class="edit-msg-rt edit-msg-rt-6"/>
+		                <p class="edit-msg-lt edit-msg-lt-7">工号:</p>
+		                <input type="text" value="VD001" class="edit-msg-rt edit-msg-rt-7"/>
+		                <div class="edit-button">保存</div>
+		                <div class="edit-msg-pic"><img src="img/taylor-1.jpg"/></div>
+		            </div>
+		            <!-------业务信息------->
+		            <div class="edit-bmsg">
+		                <p class="edit-bmsg-lt edit-bmsg-lt-1">身份证:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-1">123456123487930093</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-2">护照:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-2">123456123487930093</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-3">银行卡:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-3">12345612348793009079</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-4">中国银行上海浦东新区支行</p>
+		                <p class="edit-bmsg-rt edit-bmsg-lt-5">收款人</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-5">张三三</p>
+		                <p class="edit-bmsg-lt edit-bmsg-lt-6">驾照:</p>
+		                <p class="edit-bmsg-rt edit-bmsg-rt-6">123456123487930093</p>
+		                <div class="edit-button">保存</div>
+		            </div>
+		            <!-------分配职位与部门------->
+                        <div class="edit-job">
+                            <div class="edit-under-box1 edit-job-box1">
+                                <div>分配组织部门(单选)</div>
+                                <div class="tree-content">
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="father1-name">saas事业部</div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div>技术部</div>
+                                            </div>
+                                            <div class="floor-3">
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div>前端技术部</div>
+                                                </div>
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div>服务技术部</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div>测试部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div>企业事业部</div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor-1-name">费控部</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="edit-under-box1 edit-job-box2">
+                                <div>分配职位(单选)</div>
+                                <div>
+                                    <ul>
+                                        <li>总经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>财务经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>部门经理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                        <li>操作岗<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="edit-adjust1">调整组织></span>
+                            <span class="edit-adjust2">调整职位></span>
+                            <div class="edit-button">保存</div>
+                        </div>
+		            <!-------分配角色权限------->
+		            <div class="edit-root">
+		                <div class="edit-under-content1">
+		                <div class="edit-under-box1">
+		                    <div>制定角色（可多选）</div>
+                                <div class="edit-under-scroll">
+                                 <ul class="edit-under-ul content">
+		                            <li>部门助理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>差旅助理<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>预算编辑用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>部门主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>普通有效用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>部门业务审批用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务审核人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>财务结算人员<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>项目主管<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>普通有效用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            <li>部门业务审批用户<div class="edit-gou"><img src="img/checked-5.png"/></div></li>
+		                            
+		                         </ul>
+                                </div>
+		                </div>
+		                <div class="edit-under-box2">
+		                    <p>适用部门范围（可多选）</p>
+		                    <!--无部门选择时， 用这个-->
+                            <div class="edit-under-hide1">
+                                <div class="edit-under-bumen">
+                                    <img src="img/depart.png"/>
+                                </div>
+                                <p>该角色是全局角色，面向公司所有部门</p>
+                            </div>
+                            <!--有部门选择时， 用这个-->
+                            <div class="tree-content">
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">saas事业部</div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                        </div>
+                                        <div class="floor-3">
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">前端技术部</div>
+                                            </div>
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">服务技术部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">测试部</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">企业事业部</div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">企业事业部</div>
+                                    </div>
+                                    <div class="floor-2">
+                                        <div class="floor-2-head">
+                                            <div class="edit-arr2"><img src="img/triangle.png"/></div><div class="floor2-name">技术部</div>
+                                        </div>
+                                        <div class="floor-3">
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">前端技术部</div>
+                                            </div>
+                                            <div class="floor-3-head">
+                                                <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                <div class="floor3-name">服务技术部</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="floor-1">
+                                    <div class="floor-1-head">
+                                        <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                        <div class="floor1-name">费控部</div>
+                                    </div>
+                                </div>
+
+                            </div>
+		                </div>
+		            </div>
+		                <div class="edit-under-box1 edit-under-box3">
+		                    <div>已选角色</div>
+		                    <!--无指定角色时用这个-->
+                            <div class="edit-under-hide2">
+                                <div class="edit-under-yxjs">
+                                    <img src="img/default-2.png"/>
+                                </div>
+                                <p>暂时没有指定任何角色</p>
+                            </div>
+                            <!--有指定角色时用这个-->
+                            <div class="edit-checked">
+                                <ul>
+                                    <li>
+                                        <div>差旅助理</div>
+                                        <span>--saas事业-技术部-前端技术部</span>
+                                        <span>--saas事业-技术部-服务器技术部</span>
+                                    </li>
+                                    <li>普通有效用户</li>
+                                    <li>财务审核人员</li>
+                                </ul>
+                            </div>
+		                </div>
+		                <span class="edit-root-sys">系统角色不够？></span>
+		                <div class="edit-button edit-root-save">保存</div>
+		            </div>
+		            <!-------个人标准------->
+		            <div class="edit-stan">
+		                <ul>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1 edit-stan-k1">开支项目</li>
+		                            <li class="edit-stan-l2 edit-stan-k2">城市</li>
+		                            <li class="edit-stan-l3 edit-stan-k3">币种</li>
+		                            <li class="edit-stan-l4 edit-stan-k4">费用标准</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">北京</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">400.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">上海</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">500.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">市内交通费</li>
+		                            <li class="edit-stan-l2">广州</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">2000.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">交通补贴费</li>
+		                            <li class="edit-stan-l2">广州</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">200.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <ul>
+		                            <li class="edit-stan-l1">交通补贴费</li>
+		                            <li class="edit-stan-l2">深圳</li>
+		                            <li class="edit-stan-l3">CYN</li>
+		                            <li class="edit-stan-l4">500.00</li>
+		                            <li class="edit-stan-l5">元/人/月</li>
+		                        </ul>
+		                    </li>
+		                </ul>
+		                <div class="edit-button">保存</div>
+		            </div>       	
+		            
+	       </div>
+
+	    </div>
+		</div>
+    
+    <!-------所有同事－禁用操作单弹框开始------->
+		<div class="forbiduse-cover" style="display: none; z-index: 500;">
+			<div class="forbiduse-alert">
+				<div class="forbiduse-alert-top">
+					<p><span>禁用操作单</span></p>
+					<p class="forbiduse-alert-moveout"><img src="img/close-box-2.png"></p>
+				</div>
+				<ul class="content-top-list">
+					<li class="role-permission"><span>角色权限清单</span></li>
+					<li class="waitwork-list"><span>待办工作清单</span></li>
+					<li class="waitfinance-list"><span>财务清单</span></li>
+					<li class="btm-line"></li>
+				</ul>
+				<div class="controlBox">
+				<!--角色权限清单块儿-->
+				<div class="travel-assistant-img-123 control" style="display:block;">
+					<div class="travel-assistant">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>差旅助理</span></p></div>
+						<ul class="assistant-list">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>
+							<li>
+								<span>--saas事业-技术部-服务器技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>
+						<ul>
+					</div>
+					<div class="travel-assistant">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>部门主管</span></p></div>
+						<ul class="assistant-list">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>						
+						<ul>
+					</div>	
+					<div class="travel-assistant">
+						<div class="htit"><p><img src="img/close-role-icon.png"></p><p><span>财务审核人员</span></p></div>
+						<ul class="assistant-list">
+							<li>
+								<span>--saas事业-技术部-前端技术部</span>
+								<p class="assistant-list-img-1"><img src="img/role-icon.png"></p>
+								<p class="assistant-list-img-2"><img src="img/move-1-icon.png"></p>
+							</li>						
+						<ul>
+					</div>	
+					<div class="travel-assistant">
+						<div class="htit" style="position: relative;"><p><img src="img/close-role-icon.png"></p><p style="margin-left: 22px;"><span style="font-size: 12px;">普通有效用户</span></p>
+							<div class="assistant-list-img-11"><img src="img/role-icon.png"></div>
+							<div class="assistant-list-img-22"><img src="img/move-1-icon.png"></div>
+						</div>
+					</div>					
+				</div>
+				
+				<!--待办工作清单-->
+				<div class="wait-work-list control" style="display:none;">
+					<div class="wait-read-report"><p><span>待批阅的工作报告</span></p><p class="connect-per">交接</p></div>
+					<div class="wait-read-report"><p><span>待批阅的签到</span></p><p class="connect-per">交接</p></div>
+					<div class="wait-read-report" style="border-bottom: none;"><p><span>待批阅的日程</span></p><p  class="connect-per" >交接</p></div>
+				</div>
+				
+				<!--财务清单块儿-->
+				<div class="finance-list-report control" style="display:none;">
+					<div class="zhushi">
+						<p><i style="color:#D0021B;">*</i>有未核销的财务清单，不能禁用该员工账户</p>
+					</div>
+					<div class="table-content-list">
+						<div class="table-title-name">
+							<span style="margin-left: 30px;">单据名称</span>
+							<span style="margin-left:102px;">事由</span>
+							<span style="margin-left:129px;">提交时间</span>
+							<span style="margin-left:79px;">状态</span>
+						</div>
+						<div class="table-content-details">
+						<div class="table-content-details-list">
+							<span style="margin-left: 24px;">现金预支单</span>
+							<span style="margin-left:56px;">3月份北京出差费用</span>
+							<span style="margin-left:66px;">2016-02-28 14:07</span>
+							<span style="margin-left:44px;">未核销</span>
+						</div>
+						<div class="table-content-details-list">
+							<span style="margin-left: 24px;">现金预支单</span>
+							<span style="margin-left:56px;">3月份北京出差费用</span>
+							<span style="margin-left:66px;">2016-02-28 14:07</span>
+							<span style="margin-left:44px;">未核销</span>
+						</div>
+						<div class="table-content-details-list">
+							<span style="margin-left: 24px;">现金预支单</span>
+							<span style="margin-left:56px;">3月份北京出差费用</span>
+							<span style="margin-left:66px;">2016-02-28 14:07</span>
+							<span style="margin-left:44px;">未核销</span>
+						</div>
+						<div class="table-content-details-list">
+							<span style="margin-left: 24px;">现金预支单</span>
+							<span style="margin-left:56px;">3月份北京出差费用</span>
+							<span style="margin-left:66px;">2016-02-28 14:07</span>
+							<span style="margin-left:44px;">未核销</span>
+						</div>
+						<div class="table-content-details-list">
+							<span style="margin-left: 24px;">现金预支单</span>
+							<span style="margin-left:56px;">3月份北京出差费用</span>
+							<span style="margin-left:66px;">2016-02-28 14:07</span>
+							<span style="margin-left:44px;">未核销</span>
+						</div>
+						</div>
+					</div>
+				</div>
+
+				</div>
+				<div class="forbidden-use"><span>禁用</span></div>
+				<div class="cancel-use"><span>取消</span></div>
+			</div>
+			
+		</div> 
+		<!--禁用操作单弹框结束-->
+    	
+    <!--选择权限交接人弹框开始-->
+		<div class="permission-connect" style="display:none; z-index:1000;">
+				<div class="permission-connect-alert">
+					<div class="forbiduse-alert-top">
+						<p><span>选择权限交接人</span></p>
+						<p class="close-connect"><img src="img/close-box-2.png"></p>
+					</div>
+					<div class="tosearch-name">
+						<input type="text" placeholder="搜索姓名" />
+						<p><img src="img/search.png"></p>
+					</div>
+					<div class="tosearch-content">						
+
+						<div class="all-content">
+              <div class="tree-content">
+                <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="father1-name"><span>saas事业部</span></div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div><span>技术部</span></div>
+                                            </div>
+                                            <div class="floor-3">
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div><span>前端技术部</span></div>
+                                                </div>
+                                                <div class="floor-3-head">
+                                                    <div class="edit-arr3"><img src="img/check-box-1.png"/></div>
+                                                    <div><span>服务技术部</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="floor-2">
+                                            <div class="floor-2-head">
+                                                <div class="edit-arr2"><img src="img/triangle.png"/></div><div><span>测试部</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div><span>企业事业部</span></div>
+                                        </div>
+                                    </div>
+                <div class="floor-1">
+                                        <div class="floor-1-head">
+                                            <div class="edit-arr1"><img src="img/triangle.png"/></div>
+                                            <div class="floor-1-name"><span>费控部</span></div>
+                                        </div>
+                                    </div>
+							</div>
+            </div>
+
+
+						<div class="tosearch-content-right">
+							<div class="content-right-list" style="background: #F5F6FA;">
+								<div class="content-right-list-name" style="margin-left:36px;"><span style="font-weight: bold;">姓名</span></div>
+								<div class="content-right-list-position"><span style="font-weight: bold;">职位</span></div>
+								<div class="content-right-list-role"><span style="font-weight: bold;">角色</span></div>
+							</div>
+							<div class="content-right-list">
+								<div class="content-right-list-icon"><img src="img/check-box-1.png"></div>
+								<div class="content-right-list-name"><span>张三三</span></div>
+								<div class="content-right-list-position"><span>设计师</span></div>
+								<div class="content-right-list-role"><span style="color: #277BCF; cursor: pointer;">查看</span></div>
+							</div>
+							<div class="content-right-list">
+								<div class="content-right-list-icon"><img src="img/check-box-1.png"></div>
+								<div class="content-right-list-name"><span>李思思</span></div>
+								<div class="content-right-list-position"><span>产品经理</span></div>
+								<div class="content-right-list-role"><span style="color: #277BCF; cursor: pointer;">查看</span></div>
+							</div>
+							<div class="content-right-list">
+								<div class="content-right-list-icon"><img src="img/check-box-1.png"></div>
+								<div class="content-right-list-name"><span>王武武</span></div>
+								<div class="content-right-list-position"><span>工程师</span></div>
+								<div class="content-right-list-role"><span style="color: #277BCF; cursor: pointer;">查看</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="save-icon"><span>保存</span></div>
+				</div>	
+		</div>
+		<!--选择权限交接人弹框结束-->     			
+    
+		<!--导出员工信息弹出框-->	
+			<div class="popUpbox-exportEmployee">
+				<div	 class="exportEmployee">
+					<div class="exportEmployee-top">
+						<p>导出员工信息</p>
+						<span>
+						<img src="img/close-box-2.png"  />
+						</span>
+					</div>
+					<div class="exportEmployee-bottom">
+						<span>默认只导出"启用"状态员工</span>
+						<div  class="exportEmployee-bottom-disab">
+							<div class="exportEmployee-bottom-disable">
+								<img src="img/checked-1.png"  />
+								
+								所有员工
+							</div>
+							<div class="exportEmployee-bottom-disable">
+								<img src="img/check-box-1.png"  />
+								
+								全部员工(含禁用状态)
+							</div>
+						</div>
+						<div class="exportEmployee-bottom-format">
+							<p>选择导出文件格式</p>
+							<div class="exportEmployee-bottom-chice">
+								<p>excel</p>
+								<img src="img/open.png" />								
+							</div>
+							<div class="exportEmployee-bottom-popUp">
+								<p>psd</p>
+								<p>excel</p>
+							</div>
+						</div>
+						<div class="exportEmployee-bottom-preservation">保存</div>
+					</div>
+				</div>
+			</div>
+			
+		<!--员工管理－添加管理设置弹出框-->	
+		<div class="cover">
+        	<div class="cover-alert">
+            	<div class="alert-top"><span>添加管理员</span><div style="position:absolute; top:6px; right:6px; width:15px; height:15px;"><img src="img/close-box-2.png"></div></div>
+                <div class="cover-alert-search">
+                	<p class="people-search"><img src="img/GEM-img/GEM-1.png"></p>
+                    <p class="people-search"><img src="img/GEM-img/GEM-2.png"></p>
+                    <input class="search-tool" placeholder="搜索" />
+                </div>
+                <div class="kind">
+	                	<div class="kind-1">
+	                    	<p class="p1">财务部</p>
+	                    <p class="p2"><img src="img/check-box-3.png"></p>
+	                </div>
+                		<ul style="display: block;">
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓紫棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓邓邓</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋</span></p>
+                    		</li>
+                    		
+                    </ul>
+	                    
+                    
+                    <div class="kind-1">
+                    		<p class="p1">市场部</p>
+                        <p class="p2"><img src="img/check-box-3.png"></p>
+                    </div>
+                    <ul>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓紫棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋紫</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋紫</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓紫棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋</span></p>
+                    		</li>
+                    		
+                    </ul>
+                    
+                    <div class="kind-1">
+                    		<p class="p1">技术部</p>
+                        <p class="p2"><img src="img/check-box-3.png"></p>
+                    </div>
+                     <ul>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓紫棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋</span></p>
+                    		</li>
+                    		<li>                    		
+	                    		<span><img src="img/check-box-1.png"></span>
+	                        <p><img src="img/GEM-img/GEM-16.png"></p>
+	                        <p><span>邓棋紫</span></p>
+                    		</li>
+                    </ul>  
+                    
+                </div>
+                <div class="add2"><span>添加（2）</span></div>
+            </div>
+        </div>
+		
+		
+		
+		
+		<!--正在加载中-->
+  	<div id="load">
+  		<p>
+  			<img src="img/loading.png"/>
+  		</p>
+  	</div>
+  	<!--正在加载中-->
+  	<!--聊天放大功能start-->
+  	<div class="big-chat">
+  		<div class="">
+  			
+  		</div>
+  	</div>
+  	<!--聊天放大功能end-->		
+		<!--个人设置开始-->
+  	<div id="personal-information">
+  		<div>
+  			<p><img src="img/GEM-img/GEM-24.png"/></p>
+  			<p>张三三</p>
+  			<p>
+  				<span><img src="img/chat.png"/></span>
+  				<span>发送消息</span>
+  			</p>
+  			<p><img src="img/close.png"/></p>
+  		</div>
+  		<ul>
+  			<li>个人设置</li>
+  			<li>
+  				<p>
+  					昵称：
+  				</p>
+  				<p>张三三</p>
+  			</li>
+  			<li>
+  				<p>备注：</p>
+  				<p><img src="img/write-blue.png"/></p>
+  				<p><input type="text" name=""   value="" /></p>
+  				<p><input type="button" name=""   value="确定" /></p>
+  			</li>
+  			<li>
+  				上海优读科技有限公司
+  			</li>
+  			<li>
+  				<p>姓名：</p>
+  				<p>张天庆</p>
+  			</li>
+  			<li>
+  				<p>部门：</p>
+  				<p>技术部</p>
+  			</li>
+  			<li>
+  				<p>职位：</p>
+  				<p>工程师</p>
+  			</li>
+  			<li>
+  				<p>电话：</p>
+  				<p>+86-153081754</p>
+  			</li>
+  			<li>
+  				<p>邮箱：</p>
+  				<p>abc@a.com</p>
+  			</li>
+  		</ul>
+  	</div>
+		<!--个人设置结束-->
+		<!--聊天窗口邀请新同事开始-->
+		<div id="window-chat-right-invite">
+			<div>
+				<p>邀请新同事加入</p>
+				<p class="window-invite-delete"><img src="img/close-box-2.png"/></p>
+			</div>
+			<div>
+				<div><img src="img/smile-blue.png"/></div>
+				<ul>
+					<li>提示：</li>
+					<li>1、您可以通过手机号码或邮件邀请同事加入到费控宝;</li>
+					<li>2、也可以通过：点击 <span class="window-ctrl-href">复制链接</span>，把链接直接发送给同事;</li>
+					<li>3、或者让同事扫描 <span class="window-invite_QR">二维码</span>，邀请他们加入。</li>
+					<div class="window-click_QR">
+								<p class="window-click_QR_delete"><img src="img/close-box-2.png"/></p>
+								<p><img src="img/qr-code.png"/></p>
+					</div>
+					<div class="window-click_href">
+							<div>
+								<p>通知</p>
+								<p class="window-click_href-delete"><img src="img/close-box-2.png"/></p>
+							</div>
+							<div>
+								<p>复制链接成功！</p>
+								<p>可以直接ctrl+v,发送给同事了~</p>
+							</div>
+					</div>
+				</ul>
+			</div>
+			<div class="window-invite-ul">
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name=""   value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name=""   value="" placeholder="请输入邀请邮箱或手机号码"/></li>																
+						</ul>
+						<ul>
+								<li>姓名:</li>
+								<li><input type="text" name=""   value="" placeholder="请输入姓名"/></li>
+								<li>联系方式：</li>
+								<li><input type="text" name=""   value="" placeholder="请输入邀请邮箱或手机号码"/></li>																	
+						</ul>
+			</div>
+			<div>
+				<p class="window-add-input">
+					<span><img src="img/add-blue-1.png"/></span>
+					<span>添加新同事</span>
+				</p>
+				<p class="window-invite-button">邀请</p>
+			</div>
+		</div>
+		<!--聊天窗口邀请新同事结束-->
+		<!--创建群组开始-->
+		<div id="invite-group">
+			<div class="invite-group-top">
+				<p>发起群聊</p>
+				<p>
+					<span id="invite-group-span">选择同事</span>
+					<span>选择群组</span>
+				</p>
+				<p id="border-bottom-1"><img src="img/bg-01.png"/></p>
+				<p id="border-bottom-2"><img src="img/bg-02.png"/></p>
+				<p><img src="img/close-box-2.png"/></p>
+			</div>
+			<div id="invite-group-colleague">
+				<ul>
+					<li>
+						<img src="img/GEM-img/GEM-25.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-26.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-27.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-28.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-29.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-30.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-31.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-32.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-33.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-34.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-35.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<div>
+						<p><img src="img/search.png"/></p>
+						<p><input type="text" name=""   value="搜索" /></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+				</ul>
+				<p style="clear: both;"></p>
+				<div class="colleague-list">
+					<p class="list-ul-1">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-1">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-36.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-37.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-2">
+						<span>财务部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-2">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-38.png"/></p>
+							<p>李思思</p>
+						</li>
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-39.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+					<p class="list-ul-3">
+						<span>销售部</span>
+						<span><img src="img/check-box-3.png"/></span>
+					</p>
+					<ul id="list-ul-3">
+						<li>
+							<p><img src="img/check-box-1.png"/></p>
+							<p><img src="img/GEM-img/GEM-40.png"/></p>
+							<p>李思思</p>
+						</li>
+					</ul>
+				</div>
+				<div class="colleague-search">
+						<ul>
+							<div>
+								同事<span>(11)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-41.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-42.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-43.png"/></p>
+								<p>唐僧</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-44.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+							<div>
+								群组<span>(16)</span>
+							</div>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-45.png"/></p>
+								<p>王宝强</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-46.png"/></p>
+								<p>迈克尔。杰克逊</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-47.png"/></p>
+								<p>陌陌</p>
+							</li>
+							<li>
+								<p><img src="img/check-box-1.png"/></p>
+								<p><img src="img/GEM-img/GEM-48.png"/></p>
+								<p>Taylor-swift</p>
+							</li>
+						</ul>
+				</div>
+				<div class="colleague-click">
+					确定<span>（24）</span>
+				</div>
+			</div>
+			<div id="invite-group-crowd">
+				<ul class="crowd-ul">
+					<li>
+						<img src="img/GEM-img/GEM-49.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-50.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-1.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-2.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-3.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-4.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-5.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-6.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-7.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-8.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+					<li>
+						<img src="img/GEM-img/GEM-9.png"/>
+						<span><img src="img/delete.png"/></span>
+					</li>
+				</ul>
+				<p style="clear: both;"></p>
+				<ul class="crowd-list">
+					<li>
+						<p><img src="img/GEM-img/GEM-10.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-11.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+					<li>
+						<p><img src="img/GEM-img/GEM-12.png"/></p>
+						<p>优读科技</p>
+						<p><img src="img/check-box-3.png"/></p>
+					</li>
+				</ul>
+				<div class="colleague-click">
+					确定<span>（25）</span>
+				</div>
+			</div>
+		</div>
+		<!--创建群组结束-->
+		<!--右下角快速开始-->
+		<div class="saas-Enterprise-WeChat">
+			<p><img src="img/qchat.png"/></p>
+			<p>
+				<span><img src="img/bg-qchathover.png"/></span>
+				<span>快速沟通</span>
+			</p>
+		</div>
+		<!--右下角快速结束-->
+		<!--右下角聊天列表开始-->
+		<div class="saas-Enterprise-WeChat-click">
+			<div id="click_nav_none">
+				<p>
+				<img src="img/block-3.png"/>
+				</p>
+			</div>
+			<div class="click_list">
+					<div class="chick_list_top">
+						<p><input type="text" name=""   value="" placeholder="搜索"/></p>
+						<p><img src="img/close-chating.png"/></p>
+					</div>
+	  			<ul> 
+	  				<li>
+	  					<span id="span-1" class="cur_click">同事</span>
+		  					<div id="click_nav_1">
+		  						<p>
+		  							邀请新同事
+		  						</p>
+			  					<ul>
+			  						<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-13.png"/></p>
+			  									<p>baby</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-14.png"/></p>
+			  									<p>邓超</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-15.png"/></p>
+			  									<p>至尊宝</p>
+			  									<p>5</p>
+			  								</li><li>
+			  									<p><img src="img/GEM-img/GEM-16.png"/></p>
+			  									<p>范冰冰</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-17.png"/></p>
+			  									<p>郑凯</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-18.png"/></p>
+			  									<p>周杰伦</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>生产部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-19.png"/></p>
+			  									<p>蔡依林</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-20.png"/></p>
+			  									<p>孙俪</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-21.png"/></p>
+			  									<p>郑爽</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-22.png"/></p>
+			  									<p>王国强</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-23.png"/></p>
+			  									<p>沙和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-24.png"/></p>
+			  									<p>花和尚</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-25.png"/></p>
+			  									<p>张磊</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-26.png"/></p>
+			  									<p>陈梓潼</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>研发部</p>
+			  								<p>（10）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-27.png"/></p>
+			  									<p>吴莫愁</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-28.png"/></p>
+			  									<p>陈奕迅</p>
+			  									<p>5</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-29.png"/></p>
+			  									<p>林俊杰</p>
+			  									<p>5</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+		  							<li>
+			  							<div>
+			  								<p><img src="img/open.png"/></p>
+			  								<p>销售部</p>
+			  								<p>（12）</p>
+			  							</div>
+			  							<ul style="display: none;">
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-30.png"/></p>
+			  									<p>鹿晗</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-31.png"/></p>
+			  									<p>张学友</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-32.png"/></p>
+			  									<p>马丹娜</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-33.png"/></p>
+			  									<p>马小玲</p>
+			  								</li>
+			  								<li>
+			  									<p><img src="img/GEM-img/GEM-34.png"/></p>
+			  									<p>况天佑</p>
+			  								</li>
+		  							</ul>
+		  							</li>
+			  					</ul>
+		  					</div>
+	  				</li>
+	  				<li >
+							<span id="span-2">群组</span>
+								<div id="click_nav_2" style="display: none;" >
+									<p>创建群组</p>
+									<ul>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-35.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-36.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-37.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-38.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										
+									</ul>
+								</div>
+	  				</li>
+	  				<li>
+	  					<span id="span-3">最近</span>
+	  					<ul id="click_nav_3" style="display: none;">
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-39.png"/></p>
+											</div>
+											<div>优读技术部（<span>6</span>）</div>
+											<div>5</div>
+										</li>
+										<li>
+											<div>
+													<p><img class="mail-img-1" src="img/GEM-img/GEM-40.png"/></p>
+											</div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-41.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></div>
+											<div>5</div>
+										</li>
+										<li>
+											<div><p class="nav_3_p"><img src="img/GEM-img/GEM-42.png"/></p></div>
+											<div>优读技术部优读技术部优读技术部优读技术部（<span>6</span></p></div>
+											<div>5</div>
+										</li>
+								</ul>
+	  				</li>
+	  			</ul>
+					<div class="click-search-list">
+								<ul>
+									<div>
+										同事<span>(11)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-43.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-44.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-45.png"/></p>
+										<p>薛仁贵</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-46.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+									<div>
+										群组<span>(16)</span>
+									</div>
+									<li>
+										<p><img src="img/GEM-img/GEM-47.png"/></p>
+										<p>王宝强</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-48.png"/></p>
+										<p>迈克尔。杰克逊</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-49.png"/></p>
+										<p>杨宗保</p>
+									</li>
+									<li>
+										<p><img src="img/GEM-img/GEM-50.png"/></p>
+										<p>Taylor-swift</p>
+									</li>
+								</ul>
+							</div>
+			</div>
+		</div>
+		<!--右下角聊天列表结束-->
+		<!--右下角聊天弹出窗口开始-->
+		<div class="saas-chatWindow">
+  				<ul class="window-left">
+  					<li class="bk-list-1">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+  						</div>
+  						<div>凳子琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪琪</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  					<li class="">
+  						<div>
+  							<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+  						</div>
+  						<div>邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋邓紫棋</div>
+  						<div>1</div>
+  						<div><img src="img/close-chating.png"/></div>
+  					</li>
+  				</ul>
+  				<div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="group-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-10.png"/></p>
+								</div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这位这录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-1.png"/></b>
+									<span class="chat-delete">
+										<span>
+											<img src="img/message-gray.png"/>
+											<span>
+												<b>撤回</b>
+												<b>删除</b>
+											</span>
+										</span>
+										<span>4人未读</span>
+									</span>
+									</p>
+								</div>
+							</li>
+							<li class="li-right">
+								<div>
+									<img src="img/GEM-img/GEM-1.png">
+								</div>
+								<div>
+									<p>2016-01-07 16:33:56</p>
+									<p>小丽</p>
+									<p>
+										<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+										<b><img src="img/block-1.png"/></b>
+									</p>
+								</div>
+								<div>
+									<p class="chat_click_delete"><img src="img/message-gray.png"/>
+										<span>
+											<b>撤回</b>
+											<b>删除</b>
+										</span>
+									</p>
+									<p>4人未读</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>
+									<span class="send-enclosure-right" onclick="send_enclosure_right();">
+											<span>
+													<img src="img/acc(10).png"/>
+													<strong>
+															<b>文件名文件名</b>
+															<b>349KB</b>
+													</strong>
+											</span>
+											<span class="download-right">
+												<i></i>
+											</span>
+											<span>
+												撤销
+											</span>
+										</span>
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-10.png"/></div>
+								<div>
+									<!--<p>10-07 20:42</p>-->
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name=""   value="发送"  onclick="javascript:setBottom();"/>
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		      <div class="window-right" style="display: none;">
+  					<div class="mail-user">
+  						<div>
+								张三dsaaaaaaaaaadsaaaadassadsadsads  							
+  						</div>
+  						<div>
+	  						<p class="invite-chat"><img src="img/ann_chatbox.png"/></p>
+	  						<p class="personal-information-click"><img src="img/team-1.png"/></p>
+	  						<p><img src="img/max.png"/></p>
+	  						<p class="window-down"><img src="img/min.png"/></p>
+  						</div>
+  					</div>
+  					<div>
+  						<ul class="mail-list-1">
+  							<p class="saas-right-content-time">10-07 20:42</p>
+							<li class="li-left">
+								<div>
+									<p><img class="mail-img-1" src="img/GEM-img/GEM-11.png"/></p>
+								</div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-1.png"/></div>
+								<div>
+									<p>小丽</p>
+									<div class="people-card-left">
+										<div>名片</div>
+										<div>
+											<p><img src="img/GEM-img/GEM-12.png"/></p>
+											<p>王宝强王宝强王宝强王宝强王宝强</p>
+										</div>
+										<b><img src="img/block-2.png"/></b>
+									</div>
+								</div>
+							</li>
+							<p class="recall">您撤回了一条消息</p>
+							<li class="li-left">
+								<div><img src="img/GEM-img/GEM-11.png"/></div>
+								<div>
+									<p>小丽</p>
+									<p>各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录各位这周的工作记录
+									<b><img src="img/block-2.png"/></b>
+									</p>
+								</div>
+							</li>
+						</ul>
+  					</div>
+  					<div class="li-bottom-1">
+								<div>
+									<div class="brow"><img src="img/smile-face.png"/>
+										<ul>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+											<li><img src="img/expression.gif"/></li>
+										</ul>
+									</div>
+									<p class="enclosure-click"><img src="img/clip.png"/></p>
+									<p class="hover-a"><img src="img/a.png"/>
+										<span>
+											可以直接输入@
+										</span>
+									</p>
+									<ul class="a_click">
+										<li>某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某某某某某某某</li>
+										<li>某某某某某某</li>
+										<li>某某某</li>
+									</ul>
+								</div>
+								<textarea class="li-bottom-text" name="" rows="" cols="" placeholder="输入文字"><img class="img" src="img/taylor-2.jpg"/>uiefgiuweafuiwehfiuwehfouwehfiwebfoweboewf</textarea>
+								<input class="li-bottom-button" type="button" name=""   value="发送" onclick="javascript:setBottom();" />
+								<p class="prompt">按Ctrl+Enter换行</p>
+						</div>
+  				</div>
+		</div>
+		<!--右下角聊天弹出窗口结束-->
+		<header>
+			<div class="saas-top">
+				<div class="saas-logo">
+					<p><img src="img/fkb-logo-2.png"/></p>
+					<p>紫琪公司</p>
+				</div>
+				<ul class="saas-nav">
+						<a href="index-home.html">
+							<li><img src="img/home.png"/></li>
+						</a>
+						<a href="index-information.html">
+							<li>消息<b></b></li>
+						</a>
+						<a href="index-work.html">
+							<li>工作<b></b></li>
+						</a>
+						<a href="index-addressList.html">
+							<li>通讯录</li>
+						</a>
+						<a href="index-find.html">
+							<li>发现</li>
+						</a>
+						<a href="index-System.html">
+							<li style="background: #2D8FD7;">设置</li>
+						</a>
+				</ul>
+				<ul class="saas-nav-right">
+					<li id="saas-add">
+						<span><img src="img/qadd.png"/></span>
+							<ul>
+								<p></p>
+								<li><a href="">记开支流水</a></li>
+								<li><a href="">提交开销</a></li>
+								<li><a href="">差旅预定</a></li>
+								<li><a href="">审批</a></li>
+								<li><a href="">写工作报告</a></li>
+								<li><b></b></li>
+								<li><a href="">发布公告</a></li>
+								<li><a href="">邀请同事</a></li>
+								<li><a href="">创建群组</a></li>
+								<div></div>
+							</ul>
+					</li>
+					<li id="saas-search">
+						<span><img src="img/search_nav.png"/></span>
+						<form action="" method="post">
+							<p></p>
+							<div>
+								<div>
+									<img src="img/search.png"/>
+									<input type="text" name="" id="" value="" placeholder="搜索"/>
+								</div>
+							</div>
+							<span></span>
+						</form>
+					</li>
+					<li id="saas-user">
+						<span id="saas-img"><img src="img/GEM-img/GEM-1.png"/></span>
+						<span>邓紫棋</span>
+						<span><img src="img/select-white.png"/></span>
+						<ul>
+								<p></p>
+								<li><a href="">个人设置</a></li>
+								<li><b></b></li>
+								<li><a href="">账户安全</a></li>
+								<li><a href="">推荐给好友</a></li>
+								<li><a href="">意见反馈</a></li>
+								<li><b></b></li>
+								<li><a href="">客户端下载</a></li>
+								<li><a href="index-login.html">安全退出</a></li>
+								<div></div>
+							</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		
+		
+		<div class="saas-left">
+					<p id="infor-1" onclick="location.href = 'index-System.html'; ">
+						<img src="img/FKB-7.png"/>
+						<span>个人信息</span>
+					<p  id="infor-2"  onclick="location.href = 'index-SystemSecurity.html'; ">
+						<img src="img/FKB-5.png"/>
+						<span>账号安全</span>
+					</p>
+					<p  id="infor-3"  onclick="location.href = 'index-SystemInformation.html'; ">
+						<img src="img/FKB-3.png"/>
+						<span>消息通知</span>
+					</p>
+					<p  id="infor-4"  class="left-p-click "  onclick="location.href = 'index-SystemeAllenterprise.html'; ">
+						<img src="img/FKB-1.png"/>
+						<span>企业管理</span>
+					</p>
+		</div>
+		<div class="saas-System-left staff-classification" id="system-nav" style="overflow-y: auto;">
+					<!--当无待分组员工时，<i></i>不显示-->
+					<div class="saas-System-leftNav2  staff-size">员工管理</div>
+						<p>
+							待分组
+							<i class="staff-waitPacket">2</i>
+						</p>
+						<p class="bk-list-1">所有同事</p> 
+						<p>管理员设置</p> 
+		</div>
+		<div>
+			<div class="saas-System-content" id="system-content">
+				<div class="Basic-information"  style="display: none;">
+					<!--当无待分组员工时，<em></em>不显示-->
+					<div class="staff-right-top">
+						<p><span>员工管理 > 待分组</span><em>（ <i>2</i> ）</em>
+						</p>
+					</div>
+					<div class="staff-right-center">
+						<div class="staff-right-invitation invitation-one">邀请新同事</div>
+						<div class="staff-right-invitation invitation-all">批量邀请</div>
+						<div class="staff-right-search">
+							<input class="staff-right-searc" type="text" placeholder="搜索姓名、手机等" />
+							<i><img src="img/search.png" alt="" /></i>
+						</div>
+					</div>
+					<div class="staff-right-bottom">
+						<div class="staff-right-frame">
+							<div class="staff-nav-chack">
+							<div class="staff-right-nav wait-all">								
+								<img src="img/check-box-3.png" alt=""  />
+								<em>姓名</em>
+								<i>手机号</i>
+								<b>所属部门</b>
+								<strong>职位</strong>
+								<big>角色</big>
+								<span>个人标准</span>
+								<small>
+									状态<img src="img/open.png" />
+									<div class="allDepartment">
+										<p>启用</p>
+										<p>未启用</p>
+									</div>
+								</small>
+								<p>编辑信息</p>
+								</div>
+							</div>
+
+							<div class="staff-employee-information">
+								
+									<!--无待分组人员时显示-->
+									<div class="staff-employee-center" style="display: none;">
+									<img src="img/nocontent.png" alt=" " />
+									<p>暂时没有相关记录信息</p>
+									</div>
+									
+									<!--有待分组人员时显示-->
+									
+										<ul class="staff-waitPacket-pepole waitPacket-pepole">
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张四四</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三四</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张四三</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张四五</em>
+												<i>13312347895</i>
+												<b>(未分组)</b>
+												<strong>(未设置)</strong>
+												<big>(未设置)</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+										</ul>
+									
+							</div>
+						
+							
+							<div class="staff-right-adjustment wait-adjustment ">
+								<img src="img/check-box-3.png" alt=""  />
+								<p>已选<span>1</span>项</p>
+								<a href="javascript:;">批量分配部门和职位</a>
+								<a href="javascript:;">批量调整角色权限</a>
+							</div>
+						</div>
+					</div>
+					<div class="professional-bottom">
+							<p>共有12页，每页10条</p>
+							<ul style="height: 114px;">
+                                <li class="add-style1"><img src="img/first-page.png" alt=""/></li>
+                                <li class="add-style1"><img src="img/pre-page.png" alt=""/></li>
+                                <li class="add-style1"><input type="text" name=""   value="1" /></li>
+                                <li class="add-style1"><img src="img/next-page.png" alt=""/></li>
+                                <li class="add-style1"><img src="img/last-page.png" alt=""/></li>
+							</ul>
+							<input class="text-input" name="" id="" value="" placeholder="1" type="text">
+							<input class="button-input" name="" id="" value="GO" type="button">
+					</div>
+				</div>
+				
+				<div class="organizational-structure">
+					
+					<div class="staff-right-top">
+						<p><span>员工管理 > 所有同事</span>
+						</p>
+					</div>
+					<div class="staff-right-center">
+						<div class="staff-right-invitation invitation-one">邀请新同事</div>
+						<div class="staff-right-invitation invitation-all">批量邀请</div>
+						<div class="staff-right-search allstaff-search">
+							<input class="staff-right-searc" type="text" placeholder="搜索姓名、手机等" />
+							<i><img src="img/search.png" alt="" /></i>
+							<div class="staff-right-export">导出</div>
+						</div>
+						
+					</div>
+					<div class="staff-right-bottom">
+						<div class="staff-right-frame">
+							<div class="staff-nav-chack">
+							<div class="staff-right-nav all-all">								
+								<img src="img/check-box-3.png" alt=""  />
+								<em>姓名</em>
+								<i>手机号</i>
+								<b>
+									所属部门<img src="img/open.png" />
+									<div class="allDepartment">
+										<p>Saas事业部－技术部－前端技术部</p>
+										<p>Saas事业部－技术部</p>
+										<p>Saas事业部</p>
+									</div>
+								</b>
+								<strong>
+									职位<img src="img/open.png" />
+									<div class="allDepartment">
+										<p>技术员</p>
+										<p>操作手</p>
+										<p>维修员</p>
+									</div>
+								</strong>
+								<big>
+									角色<img src="img/open.png" />
+									<div class="allDepartment">
+										<p>小娄娄</p>
+										<p>小boss</p>
+										<p>大boss</p>
+									</div>
+								</big>
+								<span>个人标准</span>
+								<small>
+									状态<img src="img/open.png" />
+									<div class="allDepartment">
+										<p>启用</p>
+										<p>未启用</p>
+									</div>
+								</small>
+								<p>编辑信息</p>
+								</div>
+							</div>
+
+							<div class="staff-employee-information">
+								
+										<ul class="staff-waitPacket-pepole allstaff-list">
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－前端技术部</b>
+												<strong>设计师</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张四四</em>
+												<i>13312347895</i>
+												<b>Saas事业部－技术部－服务器技术部</b>
+												<strong>产品经理</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<p>普通有效用户</p>
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三</em>
+												<i>13312347895</i>
+												<b>企业事业部－技术部</b>
+												<strong>财务总监</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<em>财务总监</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											<li>
+												<img src="img/check-box-3.png" alt=""  />
+												<em>张三三四</em>
+												<i>13312347895</i>
+												<b>企业事业部－测试部</b>
+												<strong>副总经理</strong>
+												<big>查看
+													<div class="staff-span-see">
+														<em>部门经理</em>
+													</div>
+												</big>
+												<span>查看</span>
+												<small>启用</small>
+												<p>编辑</p>
+											</li>
+											
+										</ul>
+									
+							</div>
+						
+							
+							<div class="staff-right-adjustment all-adjustment">
+								<img src="img/check-box-3.png" alt=""  />
+								<p>已选<span>1</span>项</p>
+								<a href="javascript:;">批量分配部门和职位</a>
+								<a href="javascript:;">批量调整角色权限</a>
+							</div>
+						</div>
+					</div>
+					<div class="professional-bottom">
+							<p>共有12页，每页10条</p>
+							<ul style="height: 114px;">
+                                <li class="add-style1"><img src="img/first-page.png" alt=""/></li>
+                                <li class="add-style1"><img src="img/pre-page.png" alt=""/></li>
+                                <li class="add-style1"><input type="text" name=""   value="1" /></li>
+                                <li class="add-style1"><img src="img/next-page.png" alt=""/></li>
+                                <li class="add-style1"><img src="img/last-page.png" alt=""/></li>
+							</ul>
+							<input class="text-input" name="" id="" value="" placeholder="1" type="text">
+							<input class="button-input" name="" id="" value="GO" type="button">
+					</div>
+					
+					</div>
+				<div class="professional-level"  style="display: none;">
+					<div class="reset-content-top">
+						<p><span>员工管理 > 管理员设置</span>
+						</p>
+					</div>
+                    <div class="reset-manager">
+                    	
+                        <div class="border_btm">
+                        		<div class="reset-manage reset-set"><p><span>设置企业管理员</span></p></div>
+                     		<div class="reset-please reset-jurisdiction"><p><span>邀请权限</span></p></div>
+                        </div>
+                    </div>
+                    
+                    <!--设置企业管理员-->
+                    <div class="add-delete">
+                    		<div class="settings-add"><p><span>添加</span></p></div>
+                        <div class="settings-delete"><p><span>删除</span></p></div>
+                    </div>
+                    <div class="people-con">
+                    		<div class="people-con-super">
+                        		<p><img src="img/girl-2.jpg"></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                            <p><span>(超级管理员)</span></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/taylor-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                        <div class="people-con-1">
+                        		<p><img src="img/girl-3.jpg"><p class="delete-sure-icon"><img src="img/disable-2.png"></p></p>
+                            <p class="text-name"><span>长三三</soan></p>
+                        </div>
+                    </div>
+                    <!--邀请权限-->
+                    <div class="manager-please-content"  style="display: none;">
+						<div class="only-please"><p><img name="please" src="img/check-box-1.png"></p><p>仅管理员可邀请</p></div>
+						<div class="other-please"><p><img name="please" src="img/check-box-1.png"></p><p>其他同事也可邀请</p></div>
+					</div>
+							
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/my-style.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/SystemStaff.css"/>
+		<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/publicPopup.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--闪现框-->
+  	<div class="propertyReceipt-saveSucess">
+  		<img alt="" src="img/Book-Successcheck.png" />
+  		<p>操作成功 !</p>
+  	</div>
+		<!--一般alert弹窗-->
+	<div class="publicPopup-cover">
+		<div class="publicPopup-box">
+			<div class="publicPopup-box-top">
+				<p>这里可以替换</p>
+				<img src="img/close_box.png" alt="" />
+			</div>
+			<div class="publicPopup-box-bottom">
+				<p>您操作有误请不要乱来</p>
+				<button>确定</button>
+			</div>
+		</div>
+	</div>	
+		<button class="shanxian" style="width: 88px;height: 32px;display: block;">
+			我要闪现
+		</button>
+		<button class="alertAA" style="width: 88px;height: 32px;display: block;margin-top: 50px;">
+			我要alert
+		</button>
+	</body>
+	<script type="text/javascript" >
+		$(".shanxian").click(function(){
+			promptalert(2,'你是傻逼！');
+		});
+		$(".alertAA").click(function(){
+			promptalert(1,'禁用','你确定要禁用此功能吗？');
+		});
+	</script>
+</html>

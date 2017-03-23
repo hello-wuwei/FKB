@@ -1,0 +1,173 @@
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	background: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-black.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+.treeview li { background: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-black-line.gif) 0 0 no-repeat; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+
+
+.treeview b { 
+	display:block;
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+	height: 50px;
+}
+.treeview b { background: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-black-line.gif) 0 0 repeat-y; background-position: 0 -276px;}
+
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-gray.gif); }
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-red.gif); }
+
+.treeview-black li { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-black.gif); }
+
+.treeview-gray li { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-gray.gif); }
+
+.treeview-famfamfam li { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(http://7xthno.com2.z0.glb.qiniucdn.com/treeview-famfamfam.gif); }
+
+.treeview .placeholder {
+	background: url(http://7xthno.com2.z0.glb.qiniucdn.com/ajax-loader.gif) 0 0 no-repeat;
+	height: 16px;
+	width: 16px;
+	display: block;
+}
+
+.filetree li { padding: 3px 0 2px 16px; }
+.filetree span.folder, .filetree span.file { padding:3px 0 1px 16px; display: block;}
+.filetree span.folder { background: url(http://7xthno.com2.z0.glb.qiniucdn.com/folder.gif) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(http://7xthno.com2.z0.glb.qiniucdn.com/folder-closed.gif) 0 0 no-repeat; }
+.filetree span.file { background: url(http://7xthno.com2.z0.glb.qiniucdn.com/file.gif) 0 0 no-repeat; }
+
+
+
+
+/*tree start*/
+.border{
+	border: 1px solid #000;
+	padding: 10px 20px;
+	position: relative;
+	cursor: pointer;
+}
+.border-move{
+	position: absolute;
+	display: none;
+    width: 200px;
+    height: 41px;
+    top: -1px;
+    left: 100%;
+}
+.border:hover{
+	border: 1px solid #4A90E2;
+}
+#browser{margin-top: 50px;margin-left: 50px;}
+.add, .un, .change, .certain{
+	float: left;
+	text-align: center;
+	line-height: 26px;
+	font-size: 15px;
+	z-index: 1000;
+	margin-top: 8px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.add img{
+	width: auto;
+	height: auto;
+}
+.treeview ul{
+	margin-top: 10px;
+	margin-left: 90px;
+	cursor: pointer;
+}
+.un img{
+	width: auto;
+	height: auto;
+}
+.change img{
+	width: auto;
+	height: auto;
+}
+.border-top{
+	width: 50px;
+	border-top: 1px solid #000;
+	height: 1px;
+	float: left;
+	margin-top: 6px;
+}
+.first-div{
+	margin-left: 0px;
+	position: relative;
+	margin-top: 30px;
+}
+.first-div span{
+	display: table;
+}
+.border-bottom{
+	position: absolute;
+	top: 40px;
+	left: 57px;
+	height: 51px;
+	width: 1px;
+	border-left: 1px solid #000;
+}
+.first-content{
+	display: table-cell;
+}
+.add-class-border{
+    border: 1px dashed #000;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+}
+.add-class-border:hover{
+	border: 1px dashed #4A90E2;
+}
+
+
+
+
+/*tree end*/
